@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footer Test</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+  fetch('components/footer.html')
+    .then(res => res.text())
+    .then(html => {
+      // Remove the pinterest SVG entirely and test
+      const cleaned = html.replace(/<a href="#" aria-label="Pinterest">[\s\S]*?<\/a>/, '<a href="#">Pinterest</a>');
+      console.log('Contains footer-body after clean:', cleaned.includes('footer-body'));
+      document.getElementById('footer-placeholder').innerHTML = cleaned;
+      console.log('DOM has footer-body:', !!document.querySelector('.footer-body'));
+    });
+</script>
+</body>
+</html>
