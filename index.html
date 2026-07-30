@@ -38,6 +38,8 @@
         </div>
       </div>
 
+    </div><!-- end .hero-person -->
+
       <!-- Left content -->
       <div class="hero-content">
 <p class="hero-eyebrow">
@@ -557,8 +559,8 @@
 
   /* Touch swipe */
   let touchX = 0;
-  document.querySelector('.showcase-right').addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
-  document.querySelector('.showcase-right').addEventListener('touchend', e => {
+  document.querySelector('.showcase').addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  document.querySelector('.showcase').addEventListener('touchend', e => {
     const d = touchX - e.changedTouches[0].clientX;
     if (Math.abs(d) > 40) { d > 0 ? goTo(cur + 1) : goTo(cur - 1); resetAuto(); }
   }, { passive: true });

@@ -20,24 +20,43 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM loaded, starting component injection...');
   loadComponent('#navbar-placeholder', 'components/navbar.html');
   loadComponent('#footer-placeholder', 'components/footer.html');
+
+  // Toggle runs after navbar HTML is injected
+  document.body.addEventListener('click', (e) => {
+    const toggle = e.target.closest('.nav-toggle');
+    if (!toggle) return;
+
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('nav-open');
+    document.body.classList.toggle('menu-open');
+  });
+
+  document.body.addEventListener('click', (e) => {
+    const link = e.target.closest('.nav-mobile a');
+    if (!link) return;
+
+    document.querySelector('.navbar')?.classList.remove('nav-open');
+    document.body.classList.remove('menu-open');
+  });
 });
 
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
+
   const currentScroll = window.scrollY;
 
   if (currentScroll <= 0) {
-    document.querySelector('.navbar').classList.remove('nav-hidden');
+    navbar.classList.remove('nav-hidden');
     return;
   }
 
   if (currentScroll > lastScroll) {
-    // Scrolling down — hide
-    document.querySelector('.navbar').classList.add('nav-hidden');
+    navbar.classList.add('nav-hidden');
   } else {
-    // Scrolling up — show
-    document.querySelector('.navbar').classList.remove('nav-hidden');
+    navbar.classList.remove('nav-hidden');
   }
 
   lastScroll = currentScroll;
