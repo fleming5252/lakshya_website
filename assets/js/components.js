@@ -24,11 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // Toggle runs after navbar HTML is injected
   document.body.addEventListener('click', (e) => {
     const toggle = e.target.closest('.nav-toggle');
-    if (!toggle) return;
+    if (toggle) {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('nav-open');
+      document.body.classList.toggle('menu-open');
+      return;
+    }
 
     const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('nav-open');
-    document.body.classList.toggle('menu-open');
+    if (navbar?.classList.contains('nav-open')) {
+      const isClickInside = e.target.closest('.navbar');
+      if (!isClickInside) {
+        navbar.classList.remove('nav-open');
+        document.body.classList.remove('menu-open');
+      }
+    }
   });
 
   document.body.addEventListener('click', (e) => {
