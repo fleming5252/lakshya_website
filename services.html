@@ -121,7 +121,7 @@
             <img src="assets/images/services/services03.webp" alt="Family in front of dream home" />
           </div>
           <div class="dream-years-badge">
-            <span class="dream-years-num">10+</span>
+            <span class="dream-years-num" id="dream-years-count"></span>
             <span class="dream-years-label">YEARS OF<br/>BUILDING TRUST</span>
           </div>
         </div>
@@ -684,7 +684,7 @@
         Building Your Dream,<br/>
         <span class="process-steps-red">Step by Step</span>
       </h2>
-      <p class="process-steps-sub">We follow a transparent and proven process to ensure your project<br/>is delivered with quality, on time, and within budget.</p>
+      <p class="process-steps-sub">We follow a transparent and proven process to ensure your project is delivered with quality, on time, and within budget.</p>
     </div>
 
     <!-- Steps row -->
@@ -1029,7 +1029,7 @@
             <polyline points="9 12 11 14 15 10"/>
           </svg>
         </div>
-        <span class="stats-number">9+</span>
+        <span class="stats-number" id="stats-years-count"></span>
         <span class="stats-label">Years of Experience</span>
         <span class="stats-item-rule"></span>
       </div>
@@ -1283,36 +1283,20 @@
       <div class="faq-image-wrap">
         <img src="assets/images/services/services17.webp" alt="Lakshya Home" />
       </div>
-
-      <div class="faq-contact-bar">
-        <div class="faq-contact-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.12 2.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-            <path d="M14.5 2a9.5 9.5 0 010 19" stroke-dasharray="3 2"/>
-            <path d="M14.5 6a5.5 5.5 0 010 11" stroke-dasharray="2 1.5"/>
-          </svg>
-        </div>
-        <div class="faq-contact-text">
-          <p class="faq-contact-title">Still have questions?</p>
-          <p class="faq-contact-desc">We're here to help you. Get in touch with our team for personalized assistance.</p>
-        </div>
-        <a href="contact.html" class="faq-contact-btn">CONTACT US &rarr;</a>
-      </div>
     </div>
 
     <!-- RIGHT: Accordion -->
     <div class="faq-right">
       <div class="faq-list">
 
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
+        <div class="faq-item faq-item--open">
+          <button class="faq-q" aria-expanded="true">
             <span class="faq-num">01</span>
             <span class="faq-q-text">How long does construction take?</span>
             <span class="faq-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <circle cx="12" cy="12" r="10"/>
-                <line x1="12" y1="8" x2="12" y2="16"/>
-                <line x1="8" y1="12" x2="16" y2="12" class="faq-icon-h"/>
+                <line x1="8" y1="12" x2="16" y2="12"/>
               </svg>
             </span>
           </button>
@@ -1321,14 +1305,15 @@
           </div>
         </div>
 
-        <div class="faq-item faq-item--open">
-          <button class="faq-q" aria-expanded="true">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
             <span class="faq-num">02</span>
             <span class="faq-q-text">Do you provide turnkey solutions?</span>
             <span class="faq-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <circle cx="12" cy="12" r="10"/>
-                <line x1="8" y1="12" x2="16" y2="12"/>
+                <line x1="12" y1="8" x2="12" y2="16"/>
+                <line x1="8" y1="12" x2="16" y2="12" class="faq-icon-h"/>
               </svg>
             </span>
           </button>
@@ -1408,6 +1393,57 @@
       </div>
     </div>
 
+  </div>
+
+  <!-- Full width contact bar -->
+  <div class="faq-contact-bar">
+    <div class="faq-contact-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.12 2.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+      </svg>
+    </div>
+    <div class="faq-contact-text">
+      <p class="faq-contact-title">Still have questions?</p>
+      <p class="faq-contact-desc">We're here to help you. Get in touch with our team for personalized assistance.</p>
+    </div>
+    <a href="contact.html" class="faq-contact-btn">CONTACT US &rarr;</a>
+  </div>
+
+</section>
+
+<!-- CTA BANNER SECTION -->
+<section class="cta-banner">
+  <div class="cta-banner-bg">
+    <img src="assets/images/services/services19.webp" alt="Blueprint Background" />
+  </div>
+
+  <!-- Mobile portrait image (shown above content on mobile) -->
+  <div class="cta-banner-mobile-img">
+    <img src="assets/images/services/services19_mobile.webp" alt="Blueprint Background" />
+  </div>
+
+  <div class="cta-banner-content">
+    <span class="cta-banner-rule"></span>
+    <h2 class="cta-banner-headline">
+      Let's Build<br/>
+      Something<br/>
+      Extraordinary<br/>
+      Together.
+    </h2>
+    <p class="cta-banner-desc">Whether you're building your dream home, redesigning an existing space, or planning a commercial project, Lakshya Projects is ready to bring your vision to life.</p>
+    <div class="cta-banner-actions">
+      <a href="contact.html" class="cta-banner-btn cta-banner-btn--white">
+        CONTACT US &rarr;
+      </a>
+      <a href="assets/brochures/LAKSHYA-PROFILE-2026.pdf" download class="cta-banner-btn cta-banner-btn--outline">
+        DOWNLOAD BROCHURE
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1491,6 +1527,15 @@
       }
     });
   });
+  </script>
+
+  <script>
+  /* ── YEARS COUNTER (auto-calculates from founding year) ── */
+  const yearsCount = (new Date().getFullYear() - 2016) + '+';
+  const dreamYears = document.getElementById('dream-years-count');
+  const statsYears = document.getElementById('stats-years-count');
+  if (dreamYears) dreamYears.textContent = yearsCount;
+  if (statsYears) statsYears.textContent = yearsCount;
   </script>
 
   <script src="assets/js/components.js"></script>

@@ -26,6 +26,7 @@ async function loadComponent(selector, filePath) {
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM loaded, starting component injection...');
   loadComponent('#navbar-placeholder', 'components/navbar.html');
+  loadComponent('#cta-banner-placeholder', 'components/cta-banner.html');
   loadComponent('#footer-placeholder', 'components/footer.html');
 
   // Toggle runs after navbar HTML is injected
