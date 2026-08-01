@@ -324,6 +324,70 @@ body { font-family: var(--font-body); background: #ffffff; color: var(--text-lig
   .footer-body { grid-template-columns: 1fr; }
   .footer-cta-text { font-size: 1.6rem; }
   .footer-bottom .footer-brand-name { display: block; }
+
+  .footer-top {
+    padding: 2rem 1.2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+
+  .footer-body {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.2rem;
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    padding: 1.2rem 1.2rem;
+    font-size: 0.78rem;
+  }
+
+  /* Prevent any child from overflowing */
+  .footer,
+  .footer-top,
+  .footer-body,
+  .footer-bottom {
+    overflow-x: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Fix brand logo centering */
+  .footer-brand .nav-logo {
+    justify-content: flex-start;
+  }
+
+  /* Fix brand logo image size */
+  .footer-brand .logo-img {
+    height: 120px;
+  }
+
+  /* Fix contact rows */
+  .contact-row {
+    flex-wrap: wrap;
+  }
+
+  /* Fix footer col links */
+  .footer-col a {
+    font-size: 0.85rem;
+    padding: 0.6rem 0;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-brand .nav-logo {
+    justify-content: center;
+  }
+
+  .footer-brand p {
+    text-align: justify;
+  }
 }
 
 .hero {
@@ -5398,13 +5462,13 @@ body { font-family: var(--font-body); background: #ffffff; color: var(--text-lig
   text-align: justify;
 }
 
-/* Widgets — 5 across as cards */
+/* Widgets — 5 across, last one bleeds into image area visually */
 .philosophy-widgets {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   margin-top: 2.5rem;
-  width: 100%; /* remove the overflow into right column */
+  width: calc(100% + 8rem); /* restore original */
 }
 
 .philosophy-widget {
