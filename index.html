@@ -713,7 +713,7 @@
             </div>
             <h3>GENERAL<br />CONSTRUCTION</h3>
             <p class="service-desc">End-to-end construction solutions with quality craftsmanship and timely delivery.</p>
-            <a href="#" class="service-arrow">
+            <a href="services.html#construction" class="service-arrow">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
             <div class="service-card-bar"></div>
@@ -725,7 +725,7 @@
             </div>
             <h3>INFRASTRUCTURE<br />ARCHITECTURE</h3>
             <p class="service-desc">Designing sustainable infrastructure that combines functionality with innovation.</p>
-            <a href="#" class="service-arrow">
+            <a href="services.html#architecture" class="service-arrow">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
             <div class="service-card-bar"></div>
@@ -737,7 +737,7 @@
             </div>
             <h3>INTERIOR<br />DESIGN</h3>
             <p class="service-desc">Creating elegant and functional interiors that reflect your style and comfort.</p>
-            <a href="#" class="service-arrow">
+            <a href="services.html#interior" class="service-arrow">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
             <div class="service-card-bar"></div>
@@ -749,7 +749,7 @@
             </div>
             <h3>STRUCTURAL<br />ENGINEERING</h3>
             <p class="service-desc">Safe, durable and cost-effective structural solutions tailored to your project needs.</p>
-            <a href="#" class="service-arrow">
+            <a href="services.html#structural" class="service-arrow">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
             <div class="service-card-bar"></div>
@@ -761,7 +761,7 @@
             </div>
             <h3>HOUSE<br />RENOVATION</h3>
             <p class="service-desc">Transforming existing spaces into modern, beautiful and efficient living environments.</p>
-            <a href="#" class="service-arrow">
+            <a href="services.html#renovation" class="service-arrow">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
             <div class="service-card-bar"></div>
@@ -879,7 +879,21 @@
     layers.forEach(({ layer }) => layer.classList.remove('active'));
   });
 })();
-</script>
+  </script>
+
+  <script>
+  document.querySelectorAll('.service-card').forEach(card => {
+    const link = card.querySelector('.service-arrow');
+    const href = link?.getAttribute('href');
+    if (href && href !== '#') {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', e => {
+        if (e.target.closest('.service-arrow')) return;
+        window.location.href = href;
+      });
+    }
+  });
+  </script>
 
   <script src="assets/js/components.js"></script>
 </body>

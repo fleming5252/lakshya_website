@@ -11,6 +11,13 @@ async function loadComponent(selector, filePath) {
     console.log(`Target element for ${selector}:`, target);
     target.innerHTML = html;
     console.log(`Successfully injected ${filePath} into ${selector}`);
+
+    if (selector === '#navbar-placeholder') {
+      const page = window.location.pathname.split('/').pop() || 'index.html';
+      document.querySelectorAll('.nav-links a, .nav-mobile a').forEach(link => {
+        if (link.getAttribute('href') === page) link.classList.add('active');
+      });
+    }
   } catch (err) {
     console.error(`ERROR loading ${filePath}:`, err);
   }
@@ -56,6 +63,8 @@ window.addEventListener('scroll', () => {
   const navbar = document.querySelector('.navbar');
   if (!navbar) return;
 
+  if (navbar.dataset.locked) return; /* skip during programmatic scroll */
+
   const currentScroll = window.scrollY;
 
   if (currentScroll <= 0) {
@@ -71,3 +80,35 @@ window.addEventListener('scroll', () => {
 
   lastScroll = currentScroll;
 });
+
+/* Mobile-only hero parallax — replicates the desktop fixed-background effect
+   (image stays frozen, text drifts up and fades as you scroll) */
+(function () {
+  const hero = document.querySelector('.about-hero');
+  const content = document.querySelector('.about-hero-content');
+  if (!hero || !content) return;
+
+  let heroH = hero.offsetHeight;
+
+  function onScroll() {
+    if (window.innerWidth > 768) return;
+    const scrollY = window.scrollY;
+    if (scrollY > heroH) return;
+    const progress = scrollY / heroH;
+    content.style.transform = `translateY(${-scrollY * 0.55}px)`;
+    content.style.opacity = `${1 - progress * 2}`;
+  }
+
+  function onResize() {
+    heroH = hero.offsetHeight;
+    if (window.innerWidth > 768) {
+      content.style.transform = '';
+      content.style.opacity = '';
+    }
+    onScroll();
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onResize);
+  onScroll();
+})();
