@@ -322,6 +322,17 @@ window.addEventListener('scroll', () => {
 
   const currentScroll = window.scrollY;
 
+  /* Always show navbar while inside the hero section */
+  const hero = document.querySelector('.about-hero') || document.querySelector('.hero');
+  if (hero) {
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
+    if (currentScroll < heroBottom - 70) {
+      navbar.classList.remove('nav-hidden');
+      lastScroll = currentScroll;
+      return;
+    }
+  }
+
   if (currentScroll <= 0) {
     navbar.classList.remove('nav-hidden');
     return;

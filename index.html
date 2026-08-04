@@ -734,12 +734,12 @@
   /* Use IntersectionObserver to trigger when stats come into view */
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
+      const found = targets.find(t => t.el === entry.target);
+      if (!found) return;
       if (entry.isIntersecting) {
-        const found = targets.find(t => t.el === entry.target);
-        if (found) {
-          animateCount(found.el, found.target, found.suffix);
-          observer.unobserve(entry.target); /* run only once */
-        }
+        animateCount(found.el, found.target, found.suffix);
+      } else {
+        found.el.textContent = '0' + found.suffix; /* reset so it replays on next scroll */
       }
     });
   }, { threshold: 0.5 });

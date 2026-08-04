@@ -1956,12 +1956,159 @@ body { font-family: 'Poltawski Nowy', serif; background: #ffffff; color: var(--t
   overflow: hidden;
   display: flex;
   align-items: center;
-  /* Background scrolls with page — no fixed attachment (breaks canvas layers) */
-  background-image: url('../../assets/images/abouthero.webp');
+  /* Hero image now lives inside the WebGL container (#*-hero-webgl::before),
+     pre-zoomed 8% so the canvas render matches it — no visible jump on load. */
+  background-image: none;
   background-size: cover;
   background-position: center right;
   background-attachment: scroll;
   background-repeat: no-repeat;
+}
+
+#hero-webgl{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+    overflow:hidden;
+}
+
+#hero-webgl canvas{
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+#hero-webgl::before {
+  content: "";
+  position: absolute;
+  inset: -4%;                 /* 8% larger than container — matches shader's 1.08 zoom */
+  background-image: url('../../assets/images/abouthero.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+#projects-hero-webgl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#projects-hero-webgl canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#projects-hero-webgl::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  background-image: url('../../assets/images/projectshero.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+#services-hero-webgl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#services-hero-webgl canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#services-hero-webgl::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  background-image: url('../../assets/images/serviceshero.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+#gallery-hero-webgl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#gallery-hero-webgl canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#gallery-hero-webgl::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  background-image: url('../../assets/images/galleryhero.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+#contact-hero-webgl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+#contact-hero-webgl canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#contact-hero-webgl::before {
+  content: "";
+  position: absolute;
+  inset: -4%;
+  background-image: url('../../assets/images/contacthero.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+/* The canvas must paint above the pre-zoomed ::before layer */
+#hero-webgl canvas,
+#projects-hero-webgl canvas,
+#services-hero-webgl canvas,
+#gallery-hero-webgl canvas,
+#contact-hero-webgl canvas {
+  position: relative;
+}
+
+/* Match services mobile right-aligned crop (shader uses offset 1.0) */
+@media (max-width: 768px) {
+  #services-hero-webgl::before {
+    background-position: right;
+  }
+}
+
+.about-hero-overlay{
+    z-index:1;
+}
+
+.about-hero-content{
+    position:relative;
+    z-index:2;
 }
 
 /* Legacy bg element — hidden (background sits on the section, except contact) */
@@ -1985,13 +2132,13 @@ body { font-family: 'Poltawski Nowy', serif; background: #ffffff; color: var(--t
   background-position: center;
 }
 .page-gallery .about-hero {
-  background-image: url('../../assets/images/galleryhero.webp');
+  background-image: none;
 }
 .page-projects .about-hero {
-  background-image: url('../../assets/images/projectshero.webp');
+  background-image: none;
 }
 .page-services .about-hero {
-  background-image: url('../../assets/images/serviceshero.webp');
+  background-image: none;
 }
 .page-contact .about-hero-overlay,
 .page-services .about-hero-overlay,
@@ -2054,7 +2201,7 @@ body { font-family: 'Poltawski Nowy', serif; background: #ffffff; color: var(--t
 
 .about-hero-headline {
   font-family: 'Poltawski Nowy', serif;
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-size: clamp(2.1rem, 4.5vw, 3.4rem);
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: 0.01em;
@@ -2111,7 +2258,7 @@ body { font-family: 'Poltawski Nowy', serif; background: #ffffff; color: var(--t
   }
   .about-hero-tagline { background: #fff; padding: 0.3rem 0.8rem; border-radius: 4px; display: inline-block; color: #444; }
   .about-hero-eyebrow { font-size: 1.1rem; color: #fff; }
-  .about-hero-headline { font-size: 3.2rem; color: #fff; }
+  .about-hero-headline { font-size: clamp(2.2rem, 9vw, 3rem); color: #fff; }
 
 }
 

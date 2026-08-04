@@ -85,6 +85,15 @@
 <link rel="apple-touch-icon" href="assets/images/favicon.webp">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.168.0/build/three.module.js"
+    }
+  }
+  </script>
+
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -197,7 +206,7 @@
   <main>
 
     <section class="about-hero">
-      <div class="about-hero-bg-img"></div>
+      <div id="contact-hero-webgl"></div>
       <div class="about-hero-overlay"></div>
       <div class="about-hero-content">
         <p class="about-hero-eyebrow">
@@ -805,173 +814,6 @@
   });
 })();
 </script>
-<script>
-(function () {
-  const hero = document.querySelector('.about-hero');
-  if (!hero) return;
-
-  const canvas = document.createElement('canvas');
-  Object.assign(canvas.style, {
-    position: 'absolute',
-    top: '0', left: '0',
-    width: '100%', height: '100%',
-    zIndex: '2',
-    pointerEvents: 'none'
-  });
-  hero.appendChild(canvas);
-
-  const content = hero.querySelector('.about-hero-content');
-  if (content) content.style.zIndex = '3';
-  const overlay = hero.querySelector('.about-hero-overlay');
-  if (overlay) overlay.style.zIndex = '1';
-
-  const ctx = canvas.getContext('2d');
-  let W, H, ripples = [], trails = [], lx = -1, ly = -1, inside = false;
-
-  function resize() {
-    W = canvas.width  = hero.offsetWidth;
-    H = canvas.height = hero.offsetHeight;
-  }
-
-  class Ripple {
-    constructor(x, y, maxR, speed, alpha) {
-      this.x = x; this.y = y; this.r = 0;
-      this.maxR  = maxR  || 120;
-      this.speed = speed || 2.4;
-      this.alpha = alpha || 0.55;
-      this.dead  = false;
-    }
-    update() {
-      this.r    += this.speed;
-      this.alpha *= 0.965;
-      if (this.r >= this.maxR || this.alpha < 0.004) this.dead = true;
-    }
-    draw(ctx) {
-      const t  = this.r / this.maxR;
-      const lw = Math.max(0.5, 2.5 * (1 - t * 0.8));
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(255,255,255,${this.alpha})`;
-      ctx.lineWidth   = lw;
-      ctx.stroke();
-      if (this.r > 12) {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.r * 0.65, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(255,255,255,${this.alpha * 0.3})`;
-        ctx.lineWidth   = lw * 0.55;
-        ctx.stroke();
-      }
-    }
-  }
-
-  class Trail {
-    constructor(x, y, vx, vy) {
-      this.x = x; this.y = y;
-      this.vx = vx * 0.18; this.vy = vy * 0.18;
-      this.life = 1; this.r = Math.random() * 2.5 + 1;
-    }
-    update() { this.x += this.vx; this.y += this.vy; this.life *= 0.88; }
-    draw(ctx) {
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.r * this.life, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(255,255,255,${this.life * 0.35})`;
-      ctx.fill();
-    }
-  }
-
-  function spawnRipple(x, y, big) {
-    const maxR  = big ? 180 : 70 + Math.random() * 50;
-    const speed = big ? 3.2 : 1.8 + Math.random() * 1.2;
-    const alpha = big ? 0.65 : 0.38 + Math.random() * 0.22;
-    ripples.push(new Ripple(x, y, maxR, speed, alpha));
-  }
-
-  let moveBuffer = [], bufTimer = null;
-
-  function onMove(x, y) {
-    inside = true;
-    let vx = 0, vy = 0;
-    if (lx !== -1) { vx = x - lx; vy = y - ly; }
-    const spd = Math.hypot(vx, vy);
-
-    if (spd > 3) {
-      for (let i = 0; i < Math.min(3, Math.floor(spd / 8) + 1); i++) {
-        trails.push(new Trail(
-          x + (Math.random() - 0.5) * 6,
-          y + (Math.random() - 0.5) * 6,
-          vx, vy
-        ));
-      }
-    }
-
-    moveBuffer.push({ x, y, spd });
-    clearTimeout(bufTimer);
-    bufTimer = setTimeout(() => {
-      let dist = 0, px = lx, py = ly;
-      moveBuffer.forEach(p => { dist += Math.hypot(p.x - px, p.y - py); px = p.x; py = p.y; });
-      if (dist > 22 || moveBuffer.length === 1) {
-        const p = moveBuffer[Math.floor(moveBuffer.length / 2)];
-        spawnRipple(p.x, p.y, false);
-      }
-      moveBuffer = [];
-    }, 18);
-
-    lx = x; ly = y;
-  }
-
-  /* Events on window so it still fires even when pointer is over hero text */
-  window.addEventListener('mousemove', e => {
-    const rect = hero.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    if (x < 0 || y < 0 || x > rect.width || y > rect.height) {
-      inside = false; lx = -1; ly = -1; return;
-    }
-    onMove(x, y);
-  }, { passive: true });
-
-  hero.addEventListener('touchmove', e => {
-    const rect = hero.getBoundingClientRect();
-    const t = e.touches[0];
-    onMove(t.clientX - rect.left, t.clientY - rect.top);
-  }, { passive: true });
-
-  hero.addEventListener('click', e => {
-    const rect = hero.getBoundingClientRect();
-    const x = e.clientX - rect.left, y = e.clientY - rect.top;
-    spawnRipple(x, y, true);
-    for (let i = 0; i < 5; i++)
-      ripples.push(new Ripple(
-        x + (Math.random() - 0.5) * 30,
-        y + (Math.random() - 0.5) * 30,
-        50 + Math.random() * 40, 1.5 + Math.random(), 0.3
-      ));
-  }, { passive: true });
-
-  function ambient() {
-    if (!inside && W && H) spawnRipple(Math.random() * W, Math.random() * H, false);
-    setTimeout(ambient, 1600 + Math.random() * 2400);
-  }
-
-  function loop() {
-    ctx.clearRect(0, 0, W, H);
-    trails  = trails.filter(t  => { t.update();  if (t.life  > 0.04) { t.draw(ctx); return true; } return false; });
-    ripples = ripples.filter(r => { r.update(); if (!r.dead) { r.draw(ctx); return true; } return false; });
-    requestAnimationFrame(loop);
-  }
-
-  window.addEventListener('load', () => {
-    resize();
-    setTimeout(() => { spawnRipple(W * 0.5, H * 0.5, true);  }, 200);
-    setTimeout(() => { spawnRipple(W * 0.3, H * 0.4, false); }, 500);
-    setTimeout(() => { spawnRipple(W * 0.72, H * 0.6, false); }, 800);
-    ambient();
-    loop();
-  });
-
-  window.addEventListener('resize', resize, { passive: true });
-})();
-</script>
 
 <script>
 window.addEventListener('load', () => {
@@ -1186,6 +1028,8 @@ window.addEventListener('load', () => {
   });
 })();
 </script>
+
+<script type="module" src="assets/js/contact-hero-depth.js"></script>
 
 </body>
 </html>
