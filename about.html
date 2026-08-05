@@ -15,7 +15,7 @@
 
 <meta name="language" content="English">
 
-<meta name="theme-color" content="#E4060D">
+<meta name="theme-color" content="#5E7C6A">
 
 <meta name="color-scheme" content="light">
 
@@ -209,8 +209,7 @@
       <div class="about-hero-overlay"></div>
       <div class="about-hero-content">
         <p class="about-hero-eyebrow">
-          About Lakshya
-          <span class="about-hero-eyebrow-line"></span>
+          <span class="about-hero-eyebrow-star">✦</span> About Lakshya
         </p>
         <h1 class="about-hero-headline">
           CRAFTING<br />
@@ -223,69 +222,121 @@
     </section>
 
     <section class="about" style="position:relative;overflow:hidden;">
-      <div class="about-dots"></div>
-      <div class="about-container">
+  <div class="about-container">
 
-        <!-- Left: Images -->
-        <div class="about-images">
-          <div class="about-img-back">
-            <img src="assets/images/indexabout2.webp" alt="Interior space" />
-          </div>
-          <div class="about-img-front">
-            <img src="assets/images/indexabout1.webp" alt="Interior detail" />
-          </div>
-          <div class="about-pattern">
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-              <defs>
-                <linearGradient id="lineGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                  <stop offset="0%" style="stop-color:#E4060D;stop-opacity:0.3"/>
-                  <stop offset="50%" style="stop-color:#E4060D;stop-opacity:1"/>
-                  <stop offset="100%" style="stop-color:#ff4d4d;stop-opacity:0.3"/>
-                </linearGradient>
-              </defs>
-              <line x1="0" y1="80" x2="80" y2="0" stroke="url(#lineGrad)" stroke-width="2.5"/>
-              <line x1="20" y1="80" x2="80" y2="20" stroke="url(#lineGrad)" stroke-width="2.5"/>
-              <line x1="40" y1="80" x2="80" y2="40" stroke="url(#lineGrad)" stroke-width="2.5"/>
-              <line x1="60" y1="80" x2="80" y2="60" stroke="url(#lineGrad)" stroke-width="2.5"/>
-              <line x1="0" y1="60" x2="60" y2="0" stroke="url(#lineGrad)" stroke-width="2.5"/>
-              <line x1="0" y1="40" x2="40" y2="0" stroke="url(#lineGrad)" stroke-width="2.5"/>
-              <line x1="0" y1="20" x2="20" y2="0" stroke="url(#lineGrad)" stroke-width="2.5"/>
-            </svg>
-          </div>
-          <div class="about-years">
-            <span class="years-number" id="years-count"></span>
-            <span class="years-label">Years of Excellence</span>
-          </div>
-        </div>
-
-        <!-- Right: Content -->
-        <div class="about-content">
-          <!-- Architectural line art background -->
-          <p class="services-eyebrow"><span class="eyebrow-star">✦</span>ABOUT US</p>
-          <h2 class="about-headline">BUILD DREAMS WITH<br><span class="headline-red">QUALITY AND PRECISION</span></h2>
-          <span class="about-headline-underline"></span>
-          <p class="about-desc">Lakshya Constructions &amp; Interiors is one of the leading construction companies in Alappuzha, established in 2016 with the vision of delivering quality homes within budget. Guided by our commitment to quality, timely completion, customer satisfaction, and continuous improvement, we have successfully delivered numerous residential projects while earning the trust of homeowners across the region.</p>
-          <p class="about-desc">Backed by a skilled team of engineers, architects, and experienced professionals, we ensure every project meets the highest standards of workmanship, safety, and reliability. Every home we build reflects our dedication to excellence and lasting value.</p>
-
-          <div class="about-stat-single">
-            <div class="stat-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.5">
-                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
-                <path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
-              </svg>
-            </div>
-            <div class="stat-single-text">
-              <span class="stat-number-red">1000+</span>
-              <strong>Happy Families Trusted Us</strong>
-              <p>Proudly delivering quality homes with integrity, commitment, and customer satisfaction since 2016.</p>
-            </div>
-          </div>
-        </div>
-
+    <!-- Left: Arch Image -->
+    <div class="about-images">
+      <div class="about-arch-frame">
+        <img src="assets/images/indexabout1.webp" alt="Interior space" />
       </div>
-    </section>
+    </div>
+
+    <!-- Right: Content -->
+    <div class="about-content">
+      <p class="services-eyebrow"><span class="eyebrow-star">✦</span> ABOUT US</p>
+      <h2 class="about-headline">BUILD DREAMS WITH <span class="headline-red">QUALITY AND PRECISION</span></h2>
+      <span class="about-headline-underline"></span>
+      <p class="about-desc">Lakshya Constructions &amp; Interiors is one of the leading construction companies in Alappuzha, established in 2016 with the vision of delivering quality homes within budget. Guided by our commitment to quality, timely completion, customer satisfaction, and continuous improvement, we have successfully delivered numerous residential projects while earning the trust of homeowners across the region.</p>
+      <p class="about-desc">Backed by a skilled team of engineers, architects, and experienced professionals, we ensure every project meets the highest standards of workmanship, safety, and reliability. Every home we build reflects our dedication to excellence and lasting value.</p>
+    </div>
+
+  </div>
+
+  <!-- Bottom green wave bar with stats -->
+  <div class="about-bottom-bar">
+    <div class="about-bottom-inner">
+
+      <div class="about-bottom-stat about-bottom-stat--years">
+        <div class="about-bottom-arch-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <circle cx="12" cy="8" r="4"/><path d="M6 20v-1a6 6 0 0112 0v1"/>
+          </svg>
+        </div>
+        <span class="about-bottom-number" id="years-count"></span>
+        <span class="about-bottom-label">Years of<br>Excellence</span>
+      </div>
+
+      <div class="about-bottom-divider"></div>
+
+      <div class="about-bottom-stat about-bottom-stat--families">
+        <div class="about-bottom-arch-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <div class="about-bottom-families-text">
+          <span class="about-bottom-number">1000+</span>
+          <strong>Happy Families Trusted Us</strong>
+          <p>Proudly delivering quality homes with integrity, commitment, and customer satisfaction since 2016.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   </main>
+
+  <!-- ART OF HOUSE CONSTRUCTION SECTION -->
+<section class="aoh-section">
+  <div class="aoh-left">
+    <img src="assets/images/about01.webp" alt="House Construction and Trust" class="aoh-img" />
+    <div class="aoh-img-overlay">
+      <p class="aoh-overlay-sub">THE ART OF</p>
+      <h2 class="aoh-overlay-title">HOUSE CONSTRUCTION<br><span class="aoh-overlay-red">&amp; TRUST</span></h2>
+      <span class="aoh-overlay-rule"></span>
+    </div>
+  </div>
+  <div class="aoh-right">
+    <p class="aoh-intro">We believe that a home is a reflection of your trust in us. That's why we follow a process rooted in honesty, excellence and care – from the first sketch to the final handover.</p>
+    <div class="aoh-grid">
+      <div class="aoh-card">
+        <div class="aoh-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.7C5.6 21.7 2 17.3 2 12S5.6 2.3 12 2.3 22 6.7 22 12s-3.6 9.7-10 9.7z"/><path d="M12 8v4l3 3"/><path d="M8.5 8.5A5 5 0 0 1 12 7a5 5 0 0 1 4.9 4"/></svg>
+        </div>
+        <div>
+          <h3 class="aoh-card-title">HONEST APPROACH</h3>
+          <p class="aoh-card-desc">We believe in clarity, transparency and ethical practices.</p>
+        </div>
+      </div>
+      <div class="aoh-card">
+        <div class="aoh-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div>
+          <h3 class="aoh-card-title">QUALITY FIRST</h3>
+          <p class="aoh-card-desc">We use premium materials and expert craftsmanship to ensure lasting quality.</p>
+        </div>
+      </div>
+      <div class="aoh-card">
+        <div class="aoh-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <h3 class="aoh-card-title">COMMITMENT</h3>
+          <p class="aoh-card-desc">Your dream is our responsibility. We deliver what we promise.</p>
+        </div>
+      </div>
+      <div class="aoh-card">
+        <div class="aoh-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div>
+          <h3 class="aoh-card-title">RELATIONSHIPS</h3>
+          <p class="aoh-card-desc">We value long-term relationships built on trust and respect.</p>
+        </div>
+      </div>
+    </div>
+    <div class="aoh-quote-wrap">
+      <span class="aoh-quote-open">&ldquo;</span>
+      <p class="aoh-quote-text">Trust is the foundation.<br>Quality is the promise. You are our priority.</p>
+      <span class="aoh-quote-close">&rdquo;</span>
+      <div class="aoh-quote-rule"><span></span><span class="aoh-diamond">&#9670;</span><span></span></div>
+    </div>
+  </div>
+</section>
+<!-- END ART OF HOUSE CONSTRUCTION SECTION -->
 
   <!-- OUR VALUES SECTION -->
 <section class="values">
@@ -302,15 +353,14 @@
   <div class="values-header">
     <div class="values-header-icon">
       <svg width="28" height="32" viewBox="0 0 28 32" fill="none">
-        <rect x="4"  y="8"  width="4" height="24" rx="1" fill="#E4060D"/>
-        <rect x="12" y="0"  width="4" height="32" rx="1" fill="#E4060D"/>
-        <rect x="20" y="8"  width="4" height="24" rx="1" fill="#E4060D"/>
+        <rect x="4"  y="8"  width="4" height="24" rx="1" fill="#5E7C6A"/>
+        <rect x="12" y="0"  width="4" height="32" rx="1" fill="#5E7C6A"/>
+        <rect x="20" y="8"  width="4" height="24" rx="1" fill="#5E7C6A"/>
       </svg>
     </div>
     <div class="values-eyebrow-wrap">
-      <span class="values-eyebrow-line"></span>
+      <span class="values-eyebrow-star">✦</span>
       <span class="values-eyebrow-text">OUR VALUES</span>
-      <span class="values-eyebrow-line"></span>
     </div>
     <h2 class="values-headline">
       WHAT DRIVES US<br />
@@ -392,6 +442,67 @@
   </div>
 </section>
 
+<!-- OUR STRENGTH IN NUMBERS SECTION -->
+<section class="sin-section">
+  <div class="sin-bg">
+    <img src="assets/images/about02.webp" alt="" aria-hidden="true" class="sin-bg-img" />
+    <div class="sin-bg-overlay"></div>
+  </div>
+  <div class="sin-inner">
+    <div class="sin-header">
+      <span class="sin-header-line"></span>
+      <h2 class="sin-title">OUR STRENGTH IN NUMBERS</h2>
+      <span class="sin-header-line"></span>
+    </div>
+    <div class="sin-rule-wrap">
+      <span class="sin-rule-dot"></span>
+    </div>
+    <div class="sin-grid">
+      <div class="sin-card">
+        <div class="sin-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="sin-number" data-target="150">0</div>
+        <div class="sin-plus">+</div>
+        <div class="sin-label">Smiling Families</div>
+        <div class="sin-card-rule"></div>
+        <p class="sin-desc">Homes delivered, relationships cherished.</p>
+      </div>
+      <div class="sin-card">
+        <div class="sin-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
+        </div>
+        <div class="sin-number" data-target="10">0</div>
+        <div class="sin-plus">+</div>
+        <div class="sin-label">Years Experience</div>
+        <div class="sin-card-rule"></div>
+        <p class="sin-desc">A decade of expertise and excellence.</p>
+      </div>
+      <div class="sin-card">
+        <div class="sin-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M6 20V10"/><path d="M10 20V4"/><path d="M14 20V10"/><path d="M18 20V14"/></svg>
+        </div>
+        <div class="sin-number" data-target="100">0</div>
+        <div class="sin-plus">+</div>
+        <div class="sin-label">Professional Workers</div>
+        <div class="sin-card-rule"></div>
+        <p class="sin-desc">Skilled team dedicated to quality.</p>
+      </div>
+      <div class="sin-card">
+        <div class="sin-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div class="sin-number" data-target="100">0</div>
+        <div class="sin-plus">%</div>
+        <div class="sin-label">Our Trust</div>
+        <div class="sin-card-rule"></div>
+        <p class="sin-desc">Committed to honesty, quality &amp; transparency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END OUR STRENGTH IN NUMBERS SECTION -->
+
   <!-- OUR PROCESS SECTION -->
 <section class="process">
   <div class="process-container">
@@ -421,7 +532,7 @@
       <div class="process-features">
         <div class="process-feature">
           <div class="process-feat-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.6">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.6">
               <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/>
               <path d="M9 21V12h6v9"/>
             </svg>
@@ -436,7 +547,7 @@
 
         <div class="process-feature">
           <div class="process-feat-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.6">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.6">
               <rect x="3" y="3" width="8" height="8" rx="1"/>
               <rect x="13" y="3" width="8" height="8" rx="1"/>
               <rect x="3" y="13" width="8" height="8" rx="1"/>
@@ -626,6 +737,13 @@ window.addEventListener('load', () => {
     <span class="fab-tooltip">WhatsApp</span>
   </div>
 
+  <div class="fab-sub fab-call" id="fabCall" title="Call Us">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.04 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+    </svg>
+    <span class="fab-tooltip">Call Us</span>
+  </div>
+
   <div class="fab-sub fab-message" id="fabMessage" title="Send Message">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
@@ -665,7 +783,7 @@ window.addEventListener('load', () => {
           <div class="fab-field-wrap">
             <label class="fab-label">First Name <span class="fab-required">*</span></label>
             <div class="fab-field" id="ffFirstNameWrap">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               <input type="text" id="ffFirstName" placeholder="First name" />
             </div>
             <span class="fab-err" id="ffFirstNameErr">This field is required</span>
@@ -673,7 +791,7 @@ window.addEventListener('load', () => {
           <div class="fab-field-wrap">
             <label class="fab-label">Last Name</label>
             <div class="fab-field">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
               <input type="text" id="ffLastName" placeholder="Last name" />
             </div>
           </div>
@@ -684,14 +802,14 @@ window.addEventListener('load', () => {
           <div class="fab-field-wrap">
             <label class="fab-label">Email Address</label>
             <div class="fab-field">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               <input type="email" id="ffEmail" placeholder="email@example.com" />
             </div>
           </div>
           <div class="fab-field-wrap">
             <label class="fab-label">Contact Number <span class="fab-required">*</span></label>
             <div class="fab-field" id="ffPhoneWrap">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.04 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.04 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
               <input type="tel" id="ffPhone" placeholder="+91 98765 43210" />
             </div>
             <span class="fab-err" id="ffPhoneErr">This field is required</span>
@@ -703,7 +821,7 @@ window.addEventListener('load', () => {
           <div class="fab-field-wrap">
             <label class="fab-label">Ideal Budget Range?</label>
             <div class="fab-field fab-field--select">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
               <select id="ffBudget">
                 <option value="" disabled selected>Select range</option>
                 <option value="Below ₹26 Lakhs">Below ₹26 Lakhs</option>
@@ -713,20 +831,20 @@ window.addEventListener('load', () => {
                 <option value="₹80 Lakhs – ₹1 Crore">₹80 Lakhs – ₹1 Cr</option>
                 <option value="Above ₹1 Crore">Above ₹1 Crore</option>
               </select>
-              <svg class="fab-select-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="fab-select-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </div>
           <div class="fab-field-wrap">
             <label class="fab-label">Project Type?</label>
             <div class="fab-field fab-field--select">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.8"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.8"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
               <select id="ffProject">
                 <option value="" disabled selected>Select type</option>
                 <option value="New Home Construction">New Home Construction</option>
                 <option value="Home Renovation">Home Renovation</option>
                 <option value="Interior Design">Interior Design</option>
               </select>
-              <svg class="fab-select-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg class="fab-select-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </div>
         </div>
@@ -736,14 +854,14 @@ window.addEventListener('load', () => {
           <div class="fab-field-wrap">
             <label class="fab-label">Approx. Square Feet?</label>
             <div class="fab-field">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
               <input type="number" id="ffSqft" placeholder="e.g. 1500" min="0" />
             </div>
           </div>
           <div class="fab-field-wrap">
             <label class="fab-label">Description</label>
             <div class="fab-field fab-field--textarea">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.8" style="margin-top:3px;flex-shrink:0"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.8" style="margin-top:3px;flex-shrink:0"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
               <textarea id="ffDesc" placeholder="Describe your vision..." rows="3"></textarea>
             </div>
           </div>
@@ -779,14 +897,14 @@ window.addEventListener('load', () => {
       <div class="fab-form-right-badges">
         <div class="fab-badge">
           <div class="fab-badge-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <span>Trusted<br/>Professionals</span>
         </div>
         <div class="fab-badge-divider"></div>
         <div class="fab-badge">
           <div class="fab-badge-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E4060D" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
           <span>Timely<br/>Delivery</span>
         </div>
@@ -828,6 +946,13 @@ window.addEventListener('load', () => {
   /* ── WhatsApp direct redirect ── */
   wa.addEventListener('click', () => {
     window.open(`https://wa.me/${WA_NUMBER}`, '_blank');
+    wrap.classList.remove('open');
+  });
+
+  /* ── Call direct redirect ── */
+  const call = document.getElementById('fabCall');
+  call.addEventListener('click', () => {
+    window.location.href = 'tel:+918281611381';
     wrap.classList.remove('open');
   });
 
@@ -1009,7 +1134,7 @@ window.addEventListener('load', () => {
   position: absolute;
   inset: -5px;
   border-radius: 50%;
-  background: conic-gradient(#E30613 var(--progress, 0deg), rgba(0, 0, 0, 0.08) 0deg);
+  background: conic-gradient(#5E7C6A var(--progress, 0deg), rgba(0, 0, 0, 0.08) 0deg);
   -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
   mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 3px));
   z-index: -1;
@@ -1024,9 +1149,9 @@ window.addEventListener('load', () => {
 }
 
 .stt-btn:hover {
-  background: #E30613;
+  background: #4F6656;
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 18px 40px rgba(227, 6, 19, 0.22);
+  box-shadow: 0 18px 40px rgba(79, 102, 86, 0.22);
 }
 
 .stt-btn:hover svg {
@@ -1089,6 +1214,28 @@ window.addEventListener('load', () => {
 
     requestAnimationFrame(step);
   });
+})();
+/* ── SIN count-up on scroll ── */
+(function () {
+  const counters = document.querySelectorAll('.sin-number');
+  if (!counters.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = +el.dataset.target;
+      const duration = 1800;
+      const step = target / (duration / 16);
+      let current = 0;
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) { el.textContent = target; clearInterval(timer); return; }
+        el.textContent = Math.floor(current);
+      }, 16);
+      obs.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(c => obs.observe(c));
 })();
 </script>
 
