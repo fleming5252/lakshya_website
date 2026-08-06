@@ -784,6 +784,108 @@ body { font-family: 'Poltawski Nowy', serif; background: var(--bg); color: var(-
   }
 }
 
+/* ── ABOUT MOBILE (≤768px) ── */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "images";
+    gap: 1.5rem;
+    padding: 2.5rem 1.25rem 1.5rem;
+  }
+  .about-images {
+    grid-area: images;
+    height: 440px;
+  }
+  .about-arch-frame {
+    width: 82%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 160px 160px 0 0;
+    border-width: 2px;
+  }
+  .about-content {
+    grid-area: content;
+    text-align: center;
+  }
+  .about-content > * {
+    text-align: center;
+  }
+  .about-headline {
+    font-size: clamp(1.5rem, 6.5vw, 2rem);
+    line-height: 1.15;
+    margin-bottom: 0.9rem;
+  }
+  .about-headline-underline {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.2rem;
+  }
+  .about-desc {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .about-bottom-bar {
+    margin-top: -120px;
+    clip-path: path('M0,60 C120,10 260,110 420,60 C600,10 780,110 900,50 L900,620 L0,620 Z');
+    padding: 4.5rem 1.25rem 2rem;
+  }
+  .about-bottom-inner {
+    flex-direction: column;
+    gap: 1.75rem;
+    padding-top: 0.5rem;
+    width: 100%;
+  }
+  .about-bottom-stat {
+    flex-direction: column;
+    padding-right: 0;
+    gap: 0.4rem;
+  }
+  .about-bottom-stat--years {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    text-align: left;
+  }
+  .about-bottom-stat--years .about-bottom-arch-icon {
+    flex-shrink: 0;
+  }
+  .about-bottom-stat--years .about-bottom-number,
+  .about-bottom-stat--years .about-bottom-label {
+    display: block;
+  }
+  .about-bottom-stat--families {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding-left: 0;
+  }
+  .about-bottom-stat--families .about-bottom-families-text {
+    text-align: center;
+  }
+  .about-bottom-families-text strong {
+    font-size: 1rem;
+  }
+  .about-bottom-families-text p {
+    font-size: 0.8rem;
+  }
+  .about-bottom-arch-icon {
+    width: 64px;
+    height: 76px;
+  }
+  .about-bottom-number {
+    font-size: 1.9rem;
+  }
+  .about-bottom-divider {
+    width: 80px;
+    height: 1px;
+  }
+}
+
 
 /* ── SERVICES ── */
 .services {
@@ -2338,12 +2440,7 @@ body { font-family: 'Poltawski Nowy', serif; background: var(--bg); color: var(-
   .showcase-arrow { display: none; }
 
   .showcase-img-wrap::after {
-    background: linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.85) 0%,
-      rgba(0,0,0,0.5) 10%,
-      rgba(0,0,0,0.1) 20%
-    );
+    content: none;
   }
 
   .showcase-card {
@@ -2566,11 +2663,20 @@ body { font-family: 'Poltawski Nowy', serif; background: var(--bg); color: var(-
   position: relative;
 }
 
-/* Match services mobile right-aligned crop (shader uses offset 1.0) */
+/* Match shader mobile crop offsets (background-position = shader offset × 100%) */
 @media (max-width: 768px) {
-  #services-hero-webgl::before {
-    background-position: right;
+  #hero-webgl::before,
+  #projects-hero-webgl::before,
+  #services-hero-webgl::before,
+  #gallery-hero-webgl::before,
+  #contact-hero-webgl::before {
+    background-position: 50% center;
   }
+  #hero-webgl::before { background-position: 90% center; }
+  #projects-hero-webgl::before { background-position: 80% center; }
+  #services-hero-webgl::before { background-position: 80% center; }
+  #gallery-hero-webgl::before { background-position: 85% center; }
+  #contact-hero-webgl::before { background-position: 55% center; }
 }
 
 .about-hero-overlay{
@@ -8398,6 +8504,10 @@ body.page-services main {
   .aoh-card:last-child {
     border-bottom: none;
   }
+  .aoh-left {
+    height: 85vw;
+    max-height: 560px;
+  }
 }
 /* ── OUR STRENGTH IN NUMBERS SECTION ── */
 .sin-section {
@@ -8701,6 +8811,34 @@ body.page-services main {
   }
   .edh-right {
     height: 320px;
+    padding: 0 1.5rem;
+    justify-content: center;
+  }
+  .edh-img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+
+/* ── EVERY DREAM HOME MOBILE (≤768px) ── */
+@media (max-width: 768px) {
+  .edh-section {
+    min-height: 0;
+    overflow: visible;
+  }
+  .edh-right {
+    height: auto;
+    padding: 0 1.25rem;
+    overflow: visible;
+  }
+  .edh-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
   }
 }
 /* ── SERVICES PAGE — full grid (no slider, no desc/arrow) ── */
@@ -8802,7 +8940,7 @@ body.page-services main {
   flex-direction: column;
   gap: 16px;
   position: sticky;
-  top: 100px;
+  top: 30px;
   align-self: flex-start;
 }
 .sdp-left {
@@ -8873,13 +9011,12 @@ body.page-services main {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  height: 160px;
   flex-shrink: 0;
   box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 }
 .sdp-contact-img {
-  width: 100%; height: 100%;
-  object-fit: cover;
+  width: 100%; height: auto;
+  display: block;
   filter: brightness(0.45);
 }
 .sdp-contact-btn {
@@ -8894,6 +9031,9 @@ body.page-services main {
   font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none;
+}
+.sdp-contact-card--mobile {
+  display: none;
 }
 
 /* ── RIGHT ── */
@@ -8945,6 +9085,23 @@ body.page-services main {
   text-align: justify;
 }
 
+/* ── SDP DETAIL REVEAL ANIMATIONS ── */
+.sdp-image-wrap,
+.sdp-detail-eyebrow,
+.sdp-detail-headline,
+.sdp-detail-desc {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.sdp-image-wrap.sdp-visible,
+.sdp-detail-eyebrow.sdp-visible,
+.sdp-detail-headline.sdp-visible,
+.sdp-detail-desc.sdp-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ── MOBILE ── */
 @media (max-width: 900px) {
   .sdp-section { padding: 24px 20px; }
@@ -8954,6 +9111,8 @@ body.page-services main {
   .sdp-right { border-radius: 10px; }
   .sdp-image-wrap { height: 220px; }
   .sdp-detail-text { padding: 1.4rem 1.4rem 2rem; }
+  .sdp-left-col > .sdp-contact-card { display: none; }
+  .sdp-contact-card--mobile { display: block; margin-top: 24px; }
 }
 
 .btn-explore-detail {

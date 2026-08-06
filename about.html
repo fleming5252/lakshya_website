@@ -658,19 +658,19 @@ window.addEventListener('load', () => {
     });
   }
 
-  /* Images — slide in horizontally */
-  function slideReveal(sel, fromX, start) {
+  /* Images — slide in (x and/or y) */
+  function slideReveal(sel, fromX, start, fromY) {
     document.querySelectorAll(sel).forEach(el => {
       gsap.fromTo(el,
-        { opacity: 0, x: fromX },
-        { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out',
+        { opacity: 0, x: fromX, y: fromY || 0 },
+        { opacity: 1, x: 0, y: 0, duration: 0.9, ease: 'power3.out',
           scrollTrigger: { trigger: el, start: start || 'top 85%', toggleActions: 'play none none reverse' } }
       );
     });
   }
 
   /* ── ABOUT ── */
-  slideReveal('.about .about-images', -60);
+  slideReveal('.about .about-images', 0, 'top 85%', 60);
   labelReveal('.about .services-eyebrow');
   textReveal('.about .about-headline');
   fadeReveal('.about .about-headline-underline');
@@ -684,8 +684,52 @@ window.addEventListener('load', () => {
       { opacity: 1, y: 0, duration: 0.65, ease: 'power3.out', stagger: 0.15 });
   }
 
+  /* ── ABOUT BOTTOM BAR (stats inside clip-path) ── */
+  const aboutStats = document.querySelectorAll('.about .about-bottom-stat');
+  if (aboutStats.length) {
+    gsap.timeline({
+      scrollTrigger: { trigger: '.about .about-bottom-bar', start: 'top 80%', toggleActions: 'play none none reverse' }
+    }).fromTo(aboutStats,
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.2 });
+  }
+  const aboutIcons = document.querySelectorAll('.about .about-bottom-arch-icon');
+  if (aboutIcons.length) {
+    gsap.fromTo(aboutIcons,
+      { opacity: 0, scale: 0.6 },
+      { opacity: 1, scale: 1, duration: 0.7, ease: 'back.out(1.5)',
+        scrollTrigger: { trigger: '.about .about-bottom-bar', start: 'top 80%', toggleActions: 'play none none reverse' } });
+  }
+
   textReveal('.about .about-stat-single', 'top 85%');
   textReveal('.about .btn-about', 'top 88%');
+
+  /* ── ART OF HOUSE CONSTRUCTION ── */
+  slideReveal('.aoh-left', 0, 'top 82%', window.innerWidth <= 768 ? -80 : 60);
+  fadeReveal('.aoh-overlay-sub');
+  textReveal('.aoh-overlay-title');
+  fadeReveal('.aoh-overlay-rule');
+  textReveal('.aoh-intro');
+
+  const aohCards = document.querySelectorAll('.aoh-card');
+  if (aohCards.length) {
+    gsap.timeline({
+      scrollTrigger: { trigger: '.aoh-grid', start: 'top 80%', toggleActions: 'play none none reverse' }
+    }).fromTo(aohCards,
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.12 });
+  }
+
+  const aohIcons = document.querySelectorAll('.aoh-icon');
+  if (aohIcons.length) {
+    gsap.fromTo(aohIcons,
+      { opacity: 0, scale: 0.6 },
+      { opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.6)',
+        scrollTrigger: { trigger: '.aoh-grid', start: 'top 80%', toggleActions: 'play none none reverse' } });
+  }
+
+  textReveal('.aoh-quote-text');
+  fadeReveal('.aoh-quote-rule');
 
   /* ── VALUES ── */
   fadeReveal('.values-header-icon');
@@ -696,11 +740,24 @@ window.addEventListener('load', () => {
 
   const valueCards = document.querySelectorAll('.values .values-card');
   if (valueCards.length) {
-    gsap.timeline({
-      scrollTrigger: { trigger: '.values .values-header', start: 'top 75%', toggleActions: 'play none none reverse' }
-    }).fromTo(valueCards,
-      { opacity: 0, y: 40 },
-      { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out', stagger: 0.15 });
+    valueCards.forEach(card => {
+      const tl = gsap.timeline({
+        scrollTrigger: { trigger: card, start: 'top 85%', toggleActions: 'play none none reverse' }
+      });
+      tl.fromTo(card, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.55, ease: 'power3.out' });
+      tl.fromTo(card.querySelector('.values-icon-circle'),
+        { scale: 0, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(1.5)' }, '-=0.35');
+      tl.fromTo(card.querySelector('.values-card-heading'),
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: 'power2.out' }, '-=0.3');
+      tl.fromTo(card.querySelector('.values-card-underline'),
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.4, ease: 'power2.out', transformOrigin: 'left center' }, '-=0.25');
+      tl.fromTo(card.querySelectorAll('.values-card-text'),
+        { y: 12, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.4, ease: 'power2.out', stagger: 0.1 }, '-=0.3');
+    });
   }
 
   /* ── PROCESS ── */

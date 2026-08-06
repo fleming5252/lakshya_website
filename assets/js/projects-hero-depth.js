@@ -121,13 +121,25 @@ if (!container) {
         const mouse = { x: 0, y: 0 };
         const current = { x: 0, y: 0 };
 
-        window.addEventListener("mousemove", (e) => {
-            mouse.x =  (e.clientX / window.innerWidth  - 0.5) * 2;
-            mouse.y = -(e.clientY / window.innerHeight - 0.5) * 2;
-        });
+        const isTouch = ('ontouchstart' in window) || window.matchMedia('(pointer: coarse)').matches;
+
+        if (!isTouch) {
+            window.addEventListener("mousemove", (e) => {
+                mouse.x =  (e.clientX / window.innerWidth  - 0.5) * 2;
+                mouse.y = -(e.clientY / window.innerHeight - 0.5) * 2;
+            });
+        }
+
+        const t0 = performance.now();
 
         function animate() {
             requestAnimationFrame(animate);
+            if (isTouch) {
+                const t = (performance.now() - t0) / 1000;
+                const drift = Math.min(1, t / 1.5);
+                mouse.x = (Math.sin(t * 0.7) * 0.5 + Math.sin(t * 1.7) * 0.2) * drift;
+                mouse.y = (Math.sin(t * 0.5) * 0.5 + Math.sin(t * 1.3) * 0.2) * drift;
+            }
             current.x += (mouse.x - current.x) * 0.04;
             current.y += (mouse.y - current.y) * 0.04;
             material.uniforms.uMouse.value.set(current.x, current.y);
