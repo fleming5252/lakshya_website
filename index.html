@@ -139,69 +139,63 @@
   <div id="navbar-placeholder"></div>
 
   <main>
-    <section class="hero">
-      <!-- Background image -->
-      <div class="hero-bg">
-        <img src="assets/images/indexhero.webp" alt="" aria-hidden="true" />
+    <!-- ── HERO SLIDER: Full-screen rotating images ── -->
+    <section class="hero-slider" id="heroSlider">
+      <div class="hero-slider-content">
+        <p class="hero-slider-eyebrow"><span class="hero-slider-star">✦</span> Design. Build. Inspire.</p>
+        <h1 class="hero-slider-headline">MODERN SPACES<br>CRAFTED WITH PRECISION</h1>
       </div>
-
-      <!-- Girl image (right side) -->
-      <div class="hero-person">
-        <img src="assets/images/indexhero1.webp" alt="Interior design consultant" />
-        <!-- Rotating badge -->
-        <div class="hero-badge" id="heroBadge">
-          <svg viewBox="0 0 100 100" width="120" height="120">
-            <defs>
-              <path id="circle-text" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/>
-            </defs>
-            <text font-size="11" fill="#5E7C6A" font-family="Poltawski Nowy, serif" letter-spacing="2">
-              <textPath href="#circle-text">Get a Free Consultation • Get a Free Consultation •</textPath>
-            </text>
-          </svg>
-          <div class="badge-arrow">&#8599;</div>
+      <div class="hero-slider-layer" id="heroSliderA" style="background-image: url(assets/images/indexhero/hero1.webp);"></div>
+      <div class="hero-slider-layer hero-slider-layer--top" id="heroSliderB"></div>
+      <div class="hero-slider-dots" id="heroSliderDots"></div>
+      <!-- ── SCROLL DOWN ── -->
+      <div class="scroll-indicator hero-scroll-indicator">
+        <div class="si-text" aria-label="Scroll Down">
+          <span class="c" style="--i:0">S</span><span class="c" style="--i:1">c</span><span class="c" style="--i:2">r</span><span class="c" style="--i:3">o</span><span class="c" style="--i:4">l</span><span class="c" style="--i:5">l</span>
+          <span class="si-space"></span>
+          <span class="c" style="--i:6">D</span><span class="c" style="--i:7">o</span><span class="c" style="--i:8">w</span><span class="c" style="--i:9">n</span>
         </div>
-      </div>
-
-    </div><!-- end .hero-person -->
-
-      <!-- Left content -->
-      <div class="hero-content">
-<p class="hero-eyebrow">
-  <span class="eyebrow-star">✦</span> Design. Build. Inspire.
-</p>
-<h1 class="hero-headline">
-  MODERN SPACES<br />CRAFTED<br /><span class="headline-red">WITH PRECISION</span>
-</h1>
-        <p class="hero-sub">
-          Every space we design begins with your vision. Our team carefully blends aesthetics, functionality, and personalized details to create environments that truly mirror your taste and lifestyle.
-        </p>
-
-        <!-- Feature pills -->
-        <div class="hero-features">
-          <div class="feature-pill">
-            <span class="pill-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
-              </svg>
-            </span>
-            <span>Innovative &amp; Sustainable<br /><strong>Design Solutions</strong></span>
-          </div>
-          <div class="feature-pill">
-            <span class="pill-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
-              </svg>
-            </span>
-            <span>End-to-End Architecture &amp;<br /><strong>Interior Services</strong></span>
-          </div>
-        </div>
-
-        <!-- CTA -->
-        <div class="hero-actions">
-          <a href="contact.html" class="btn-primary">Start Your Project &#8599;</a>
+        <div class="si-arrows">
+          <span class="si-arrow si-arrow--1"></span><span class="si-arrow si-arrow--2"></span><span class="si-arrow si-arrow--3"></span>
         </div>
       </div>
     </section>
+
+<!-- ── SPLIT FRAME ANIMATION SECTION ── -->
+<section class="frame-split-section" id="frameSplitSection">
+  <div class="frame-split-sticky" id="frameSplitSticky">
+    <div class="frame-split-left">
+      <div class="frame-hero-content">
+        <p class="frame-hero-eyebrow"><span class="frame-hero-star">✦</span> Building Dreams Into Reality</p>
+        <h2 class="frame-hero-headline">ENGINEERING<br>TOMORROW'S<br><span class="frame-hero-headline-green">LANDMARKS</span></h2>
+        <p class="frame-hero-desc">From foundation to finish, every detail is crafted with precision and care. Watch as we transform vision into architecture one frame at a time.</p>
+        <div class="frame-hero-buttons">
+          <a href="projects.html" class="btn-frame-primary">Explore Projects</a>
+          <a href="contact.html" class="btn-frame-secondary">Get Free Consultation</a>
+        </div>
+      </div>
+    </div>
+    <div class="frame-split-right">
+      <div class="frame-canvas-stage">
+        <div class="frame-canvas-glow"></div>
+        <div class="frame-split-media">
+          <canvas class="frame-split-canvas" id="frameSplitCanvas"></canvas>
+        </div>
+        <div class="frame-canvas-feather"></div>
+      </div>
+    </div>
+    <div class="scroll-indicator frame-section-scroll">
+      <div class="si-text" aria-label="Scroll Down">
+        <span class="c" style="--i:0">S</span><span class="c" style="--i:1">c</span><span class="c" style="--i:2">r</span><span class="c" style="--i:3">o</span><span class="c" style="--i:4">l</span><span class="c" style="--i:5">l</span>
+        <span class="si-space"></span>
+        <span class="c" style="--i:6">D</span><span class="c" style="--i:7">o</span><span class="c" style="--i:8">w</span><span class="c" style="--i:9">n</span>
+      </div>
+      <div class="si-arrows">
+        <span class="si-arrow si-arrow--1"></span><span class="si-arrow si-arrow--2"></span><span class="si-arrow si-arrow--3"></span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ── RESIDENTIAL BUILDING EXPERTS SECTION ── -->
 <section class="rbe-section">
@@ -2111,5 +2105,183 @@ window.addEventListener('load', () => {
   });
 })();
 </script>
+
+<style>
+/* ── HERO SLIDER ── */
+.hero-slider{position:relative;width:100%;height:100vh;overflow:hidden;}
+.hero-slider-layer{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed;}
+.hero-slider-layer--top{opacity:0;transition:opacity 1.2s ease;background-attachment:fixed;}
+.hero-slider-content{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left;padding:0 4vw;}
+.hero-slider-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;font-weight:600;letter-spacing:.1em;color:#fff;margin-bottom:1rem;text-shadow:0 2px 16px rgba(0,0,0,.65);}
+.hero-slider-star{color:#5E7C6A;font-size:.9rem;}
+.hero-slider-headline{font-family:'Poltawski Nowy',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:800;line-height:1.05;color:#fff;text-shadow:0 2px 28px rgba(0,0,0,.65),0 4px 56px rgba(0,0,0,.4);}
+.hero-slider-dots{position:absolute;bottom:2rem;right:2rem;display:flex;gap:8px;z-index:3;}
+.hero-dot{width:28px;height:4px;border-radius:2px;background:rgba(79,102,86,.4);cursor:pointer;transition:background .3s,width .3s;}
+.hero-dot:hover{background:rgba(79,102,86,.7);}
+.hero-dot.active{background:#4F6656;width:44px;}
+
+/* Transparent navbar in hero slider */
+body.hero-slider-active .navbar{background:transparent;border-bottom-color:transparent;}
+body.hero-slider-active .nav-links a{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5);}
+body.hero-slider-active .nav-cta{background:#5E7C6A;box-shadow:0 2px 12px rgba(0,0,0,.3);}
+
+/* ── SPLIT FRAME ANIMATION ── */
+.frame-split-section{height:450vh;position:relative;background:#D2CEC8;}
+.frame-split-sticky{position:sticky;top:0;left:0;width:100%;height:100vh;overflow:hidden;background:#D2CEC8;}
+
+.frame-split-left{position:absolute;inset:0 52% 0 0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:0 clamp(1.5rem,5vw,5rem);z-index:1;}
+.frame-hero-content{max-width:520px;}
+.frame-hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:700;letter-spacing:.14em;color:#8FA48D;text-transform:uppercase;margin-bottom:1.2rem;}
+.frame-hero-star{color:#8FA48D;font-size:.85rem;}
+.frame-hero-headline{font-family:'Poltawski Nowy',serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:900;color:#2C2C2C;line-height:1.02;letter-spacing:-.01em;margin-bottom:1.2rem;}
+.frame-hero-headline-green{color:#8FA48D;}
+.frame-hero-desc{font-size:.92rem;color:#6F6F6F;line-height:1.7;margin-bottom:2rem;}
+.frame-hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-frame-primary{display:inline-flex;align-items:center;padding:.75rem 1.8rem;background:#8FA48D;color:#fff;font-weight:700;font-size:.85rem;letter-spacing:.04em;border-radius:6px;text-decoration:none;transition:background .2s,transform .15s,box-shadow .2s;}
+.btn-frame-primary:hover{background:#7A9278;transform:translateY(-2px);box-shadow:0 8px 24px rgba(143,164,141,.3);}
+.btn-frame-secondary{display:inline-flex;align-items:center;padding:.75rem 1.8rem;background:transparent;color:#2C2C2C;font-weight:600;font-size:.85rem;letter-spacing:.04em;border-radius:6px;text-decoration:none;border:1.5px solid #D8D4CC;transition:border-color .2s,color .2s;}
+.btn-frame-secondary:hover{border-color:#8FA48D;color:#8FA48D;}
+
+/* Scroll indicator */
+.scroll-indicator{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:14px;user-select:none;pointer-events:none;z-index:3;}
+.si-text{display:flex;align-items:baseline;letter-spacing:.18em;text-transform:uppercase;}
+.si-space{width:.45em;display:inline-block;}
+.c{display:inline-block;font-family:'Poltawski Nowy',serif;font-size:18px;font-weight:500;color:#8f8f86;}
+.si-arrows{display:flex;flex-direction:column;align-items:center;gap:2px;}
+.si-arrow{display:block;width:16px;height:16px;border-right:2px solid #8a8a80;border-bottom:2px solid #8a8a80;transform:rotate(45deg);opacity:0;animation:si-cascade 2.4s ease-in-out infinite;}
+.si-arrow--1{animation-delay:0s;}
+.si-arrow--2{animation-delay:.2s;}
+.si-arrow--3{animation-delay:.4s;}
+@keyframes si-cascade{0%{opacity:0;transform:rotate(45deg) translate(-4px,-4px)}40%{opacity:.55;transform:rotate(45deg) translate(0,0)}80%{opacity:0;transform:rotate(45deg) translate(4px,4px)}100%{opacity:0;transform:rotate(45deg) translate(4px,4px)}}
+.hero-scroll-indicator .c{color:rgba(255,255,255,.7);animation:none;text-shadow:0 1px 8px rgba(0,0,0,.5);}
+.hero-scroll-indicator .si-arrow{border-color:rgba(255,255,255,.65);}
+.frame-section-scroll{top:auto;bottom:20px;left:50%;transform:translateX(-50%);z-index:10;}
+
+/* Right: canvas stage */
+.frame-split-right{position:absolute;inset:0 16vw 0 55%;display:flex;align-items:center;justify-content:center;z-index:2;}
+.frame-canvas-stage{position:relative;display:flex;align-items:center;justify-content:center;}
+.frame-canvas-glow{position:absolute;inset:-12%;background:radial-gradient(ellipse at center,rgba(143,164,141,.10) 0%,transparent 70%);pointer-events:none;z-index:0;}
+.frame-split-media{position:relative;width:fit-content;height:fit-content;}
+.frame-split-media::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,#D2CEC8 0%,transparent 16%),linear-gradient(to top,#D2CEC8 0%,transparent 16%),linear-gradient(to right,#D2CEC8 0%,transparent 16%),linear-gradient(to left,#D2CEC8 0%,transparent 16%);pointer-events:none;z-index:3;}
+.frame-split-canvas{width:min(50vw,calc((100vh - 20px)*15/9));aspect-ratio:15/9;height:auto;object-fit:contain;display:block;will-change:transform;clip-path:inset(0 0 4% 0);}
+.frame-canvas-feather{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 52%,#D2CEC8 94%);pointer-events:none;z-index:3;}
+
+@media(max-width:768px){
+.frame-split-sticky{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:1rem;padding:0 1.2rem;box-sizing:border-box;}
+.frame-split-left{position:static;z-index:auto;width:100%;padding:2rem 0;align-items:center;text-align:center;}
+.frame-hero-content{text-align:center;}
+.frame-hero-buttons{justify-content:center;}
+.frame-split-right{position:relative;z-index:auto;width:100%;display:flex;justify-content:center;inset:auto;}
+.frame-canvas-feather{background:radial-gradient(ellipse at center,transparent 50%,#D2CEC8 92%);}
+.frame-split-canvas{width:min(90vw,calc(50vh*15/9));aspect-ratio:15/9;height:auto;}
+.frame-section-scroll .c{color:#8f8f86;}
+.frame-section-scroll .si-arrow{border-color:#8a8a80;}
+}
+</style>
+
+<script>
+/* ── HERO SLIDER ── */
+(function(){
+  var TOTAL=9, BASE='assets/images/indexhero/hero';
+  var layerA=document.getElementById('heroSliderA'), layerB=document.getElementById('heroSliderB'), dotsWrap=document.getElementById('heroSliderDots');
+  if(!layerA||!layerB)return;
+  var current=1,timer=null;
+  function url(n){return 'url('+BASE+n+'.webp)';}
+  function updDots(){
+    if(!dotsWrap)return;
+    var all=dotsWrap.querySelectorAll('.hero-dot');
+    all.forEach(function(d,i){d.classList.toggle('active',i+1===current);});
+  }
+  function goTo(n){
+    if(n===current)return;
+    layerB.style.backgroundImage=url(n);layerB.style.opacity='1';
+    setTimeout(function(){layerA.style.backgroundImage=layerB.style.backgroundImage;layerB.style.opacity='0';},1200);
+    current=n;updDots();
+  }
+  function nextSlide(){goTo((current%TOTAL)+1);}
+  if(dotsWrap){
+    for(var i=1;i<=TOTAL;i++){
+      var dot=document.createElement('span');dot.className='hero-dot'+(i===1?' active':'');
+      dot.setAttribute('data-index',i);
+      dot.addEventListener('click',(function(idx){return function(){clearInterval(timer);goTo(idx);timer=setInterval(nextSlide,5000);};})(i));
+      dotsWrap.appendChild(dot);
+    }
+  }
+  timer=setInterval(nextSlide,5000);
+  function chkNav(){document.body.classList.toggle('hero-slider-active',window.scrollY<window.innerHeight);}
+  window.addEventListener('scroll',chkNav,{passive:true});chkNav();
+})();
+</script>
+
+<script>
+/* ── FRAME ANIMATION ── */
+(function(){
+  var TOTAL_FRAMES=300;
+  var FRAME_PATH=function(n){var p=String(n).padStart(4,'0');return'assets/images/hero/frames/frame_'+p+'.jpg?v=2';};
+  var canvas=document.getElementById('frameSplitCanvas');
+  var ctx=canvas.getContext('2d',{alpha:false});
+  var section=document.getElementById('frameSplitSection');
+  var BATCH_SIZE=40,images=new Array(TOTAL_FRAMES),loadedSet={},isPaused=false,firstFrameReady=false;
+
+  function resizeCanvas(){
+    var rect=canvas.getBoundingClientRect(),dpr=Math.min(window.devicePixelRatio||1,2);
+    canvas.width=Math.max(1,Math.round(rect.width*dpr));canvas.height=Math.max(1,Math.round(rect.height*dpr));
+  }
+  resizeCanvas();
+  window.addEventListener('resize',function(){resizeCanvas();drawFrame(lastProgress);});
+
+  function loadBatch(from,count){
+    var end=Math.min(from+count,TOTAL_FRAMES);
+    for(var i=from;i<end;i++){if(images[i])continue;
+      var img=new Image();img.src=FRAME_PATH(i+1);
+      img.onload=(function(idx){return function(){loadedSet[idx]=true;if(idx===0&&!firstFrameReady){firstFrameReady=true;drawFrame(0);}};})(i);
+      images[i]=img;loadedSet[i]=false;
+    }
+  }
+
+  function preloadNear(around){
+    var lo=Math.max(0,around-30),hi=Math.min(around+30,TOTAL_FRAMES-1);
+    for(var i=lo;i<=hi;i++){if(!images[i]){var img=new Image();img.src=FRAME_PATH(i+1);img.onload=(function(idx){return function(){loadedSet[idx]=true;};})(i);images[i]=img;loadedSet[i]=false;}}
+  }
+
+  var currentFrame=-1;
+  function drawImage(img){
+    var cw=canvas.width,ch=canvas.height,iw=img.naturalWidth,ih=img.naturalHeight;
+    var scale=Math.max(cw/iw,ch/ih),dw=iw*scale,dh=ih*scale;
+    var dx=(cw-dw)/2,dy=(ch-dh)/2;
+    ctx.drawImage(img,0,0,iw,ih,dx,dy,dw,dh);
+  }
+  function drawFrame(progress){
+    var floatIndex=Math.max(0,Math.min(progress*(TOTAL_FRAMES-1),TOTAL_FRAMES-1));
+    var frameIndex=Math.round(floatIndex);
+    if(frameIndex===currentFrame)return;
+    var img=images[frameIndex];if(!img||!img.complete||!img.naturalWidth)return;
+    ctx.clearRect(0,0,canvas.width,canvas.height);drawImage(img);
+    currentFrame=frameIndex;preloadNear(frameIndex);
+  }
+
+  var lastProgress=0,rafId=null;
+  function onScroll(){
+    if(isPaused||rafId!==null)return;
+    rafId=requestAnimationFrame(function(){
+      rafId=null;
+      var rect=section.getBoundingClientRect(),sectionH=section.offsetHeight;
+      var scrollable=sectionH-window.innerHeight,scrolled=Math.max(0,-rect.top);
+      var progress=scrollable>0?Math.min(scrolled/scrollable,1):0;
+      if(Math.abs(progress-lastProgress)>0.001){lastProgress=progress;drawFrame(progress);}
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(entries){isPaused=!entries[0].isIntersecting;},{threshold:0}).observe(section);
+  }
+
+  loadBatch(0,BATCH_SIZE);
+  onScroll();
+})();
+</script>
+
+<script>history.scrollRestoration='manual';window.scrollTo(0,0);</script>
 </body>
 </html>

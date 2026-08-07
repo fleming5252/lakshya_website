@@ -899,9 +899,260 @@
       </div>
     </section>
 
-    <!-- ── FILTER + GRID SECTION ── -->
-    <section class="gal-grid-section">
-      <div class="gal-grid-container">
+    <!-- ── PREMIUM GALLERY ── -->
+    <section class="gp-section" id="gpSection">
+      <div class="gp-container">
+        <!-- Header -->
+        <div class="gp-header">
+          <p class="gp-eyebrow"><span class="gp-diamond">✦</span> Our Portfolio</p>
+          <h2 class="gp-headline">CRAFTING <span class="gp-headline-green">EXCELLENCE</span></h2>
+          <div class="gp-divider"><span></span></div>
+          <p class="gp-desc">Every project tells a story of precision, passion, and perfection — explore our handpicked works.</p>
+        </div>
+
+        <!-- Featured Project -->
+        <div class="gp-featured">
+          <div class="gp-featured-image">
+            <img src="assets/images/gallery/completed/1.webp" alt="Featured Project" loading="eager" />
+            <div class="gp-featured-fade"></div>
+          </div>
+          <div class="gp-featured-info">
+            <span class="gp-badge">✦ Featured</span>
+            <h3 class="gp-featured-title">Modern Villa Residency</h3>
+            <p class="gp-featured-loc">Alappuzha, Kerala</p>
+            <p class="gp-featured-desc">A stunning contemporary villa blending modern architecture with traditional Kerala aesthetics.</p>
+            <div class="gp-featured-meta">
+              <div><strong>4,200</strong><span>sq.ft</span></div>
+              <div class="gp-meta-div"></div>
+              <div><strong>2024</strong><span>Completed</span></div>
+            </div>
+            <a href="#" class="gp-btn-primary gp-lightbox-trigger" data-img="assets/images/gallery/completed/1.webp" data-name="Modern Villa Residency" data-loc="Alappuzha, Kerala">
+              <span>View Project</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="gp-filter-bar">
+          <button class="gp-filter-btn active" data-filter="all">All Projects</button>
+          <button class="gp-filter-btn" data-filter="completed">Completed</button>
+          <button class="gp-filter-btn" data-filter="ongoing">Ongoing</button>
+          <button class="gp-filter-btn" data-filter="renovation">Renovation</button>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="gp-grid" id="gpGrid"></div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="gp-lightbox" id="gpLightbox">
+      <button class="gp-lightbox-close" id="gpLightboxClose">&times;</button>
+      <div class="gp-lightbox-content">
+        <img src="" alt="" id="gpLightboxImg" />
+        <div class="gp-lightbox-info">
+          <strong id="gpLightboxName"></strong>
+          <span id="gpLightboxLoc"></span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div id="cta-banner-placeholder"></div>
+  <div id="footer-placeholder"></div>
+
+  <style>
+  .gp-section{background:#FAFAFA;padding:5rem 2rem 6rem;}
+  .gp-container{max-width:1280px;margin:0 auto;}
+  .gp-header{text-align:center;margin-bottom:4rem;}
+  .gp-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.2em;color:#5E7C6A;text-transform:uppercase;margin-bottom:1rem;}
+  .gp-diamond{font-size:.8rem;}
+  .gp-headline{font-family:'Poltawski Nowy',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:900;color:#1a1610;line-height:1.05;margin-bottom:1rem;}
+  .gp-headline-green{color:#5E7C6A;}
+  .gp-divider{display:flex;justify-content:center;margin-bottom:1.2rem;}
+  .gp-divider span{display:block;width:48px;height:3px;background:#5E7C6A;border-radius:2px;}
+  .gp-desc{font-size:.92rem;color:#6F6F6F;max-width:540px;margin:0 auto;line-height:1.65;}
+
+  /* Featured */
+  .gp-featured{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center;margin-bottom:5rem;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 4px 40px rgba(0,0,0,.06);}
+  .gp-featured-image{position:relative;aspect-ratio:4/3;overflow:hidden;}
+  .gp-featured-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+  .gp-featured:hover .gp-featured-image img{transform:scale(1.04);}
+  .gp-featured-fade{position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,rgba(250,250,250,.4));pointer-events:none;}
+  .gp-featured-info{padding:2.5rem 3rem 2.5rem 0;}
+  .gp-badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#5E7C6A;text-transform:uppercase;background:rgba(94,124,106,.1);padding:.35rem .9rem;border-radius:99px;margin-bottom:1.2rem;}
+  .gp-featured-title{font-family:'Poltawski Nowy',serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;color:#1a1610;margin-bottom:.6rem;}
+  .gp-featured-loc{font-size:.85rem;color:#6F6F6F;margin-bottom:1rem;display:flex;align-items:center;gap:.4rem;}
+  .gp-featured-desc{font-size:.88rem;color:#555;line-height:1.65;margin-bottom:1.6rem;}
+  .gp-featured-meta{display:flex;align-items:center;gap:1.8rem;margin-bottom:1.8rem;}
+  .gp-featured-meta div strong{display:block;font-family:'Poltawski Nowy',serif;font-size:1.5rem;font-weight:800;color:#1a1610;line-height:1;}
+  .gp-featured-meta div span{font-size:.75rem;color:#888;}
+  .gp-meta-div{width:1px;height:36px;background:rgba(0,0,0,.1);}
+  .gp-btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.6rem;background:#5E7C6A;color:#fff;font-weight:700;font-size:.82rem;letter-spacing:.04em;border-radius:8px;text-decoration:none;transition:background .2s,transform .15s;border:none;cursor:pointer;}
+  .gp-btn-primary:hover{background:#4F6656;transform:translateY(-2px);}
+
+  /* Filter */
+  .gp-filter-bar{display:flex;justify-content:center;gap:.6rem;margin-bottom:3rem;flex-wrap:wrap;}
+  .gp-filter-btn{padding:.55rem 1.4rem;border:1.5px solid rgba(0,0,0,.1);background:#fff;border-radius:99px;font-size:.8rem;font-weight:600;color:#555;cursor:pointer;transition:all .25s;letter-spacing:.03em;}
+  .gp-filter-btn:hover{border-color:#5E7C6A;color:#5E7C6A;}
+  .gp-filter-btn.active{background:#5E7C6A;color:#fff;border-color:#5E7C6A;}
+
+  /* Grid */
+  .gp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+  .gp-card{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.05);transition:transform .35s ease,box-shadow .35s ease;}
+  .gp-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.1);}
+  .gp-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+  .gp-card:hover img{transform:scale(1.06);}
+  .gp-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55) 0%,transparent 50%);z-index:1;}
+  .gp-card-info{position:absolute;bottom:0;left:0;right:0;z-index:2;padding:1.2rem;}
+  .gp-card-name{font-family:'Poltawski Nowy',serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:.25rem;}
+  .gp-card-meta{font-size:.75rem;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:.6rem;}
+  .gp-card-status{display:inline-block;font-size:.65rem;font-weight:700;letter-spacing:.08em;padding:.18rem .6rem;border-radius:99px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);text-transform:uppercase;}
+
+  /* Lightbox */
+  .gp-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+  .gp-lightbox.active{opacity:1;pointer-events:all;}
+  .gp-lightbox img{max-width:90vw;max-height:80vh;border-radius:12px;object-fit:contain;}
+  .gp-lightbox-close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:#fff;font-size:2.5rem;cursor:pointer;}
+  .gp-lightbox-info{margin-top:1rem;text-align:center;}
+  .gp-lightbox-info strong{display:block;color:#fff;font-size:1rem;font-weight:700;}
+  .gp-lightbox-info span{color:rgba(255,255,255,.5);font-size:.82rem;}
+
+  /* Empty state */
+  .gp-empty{text-align:center;padding:4rem 0;color:#999;display:none;}
+  .gp-empty.visible{display:block;}
+
+  @media(max-width:900px){
+    .gp-featured{grid-template-columns:1fr;gap:0;}
+    .gp-featured-info{padding:1.5rem;}
+    .gp-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media(max-width:600px){
+    .gp-section{padding:3rem 1.2rem 4rem;}
+    .gp-grid{grid-template-columns:1fr;}
+  }
+  </style>
+
+  <script>
+  /* ── PREMIUM GALLERY ── */
+  (function(){
+    var projects = [
+      {img:'assets/images/gallery/completed/1.webp',name:'Modern Villa Residency',loc:'Alappuzha',cat:'completed',sqft:'4200',year:'2024'},
+      {img:'assets/images/gallery/completed/2.webp',name:'Coastal Luxury Home',loc:'Kochi',cat:'completed',sqft:'3600',year:'2024'},
+      {img:'assets/images/gallery/completed/3.webp',name:'Hilltop Bungalow',loc:'Munnar',cat:'completed',sqft:'5100',year:'2023'},
+      {img:'assets/images/gallery/completed/4.webp',name:'Urban Duplex',loc:'Trivandrum',cat:'completed',sqft:'2800',year:'2023'},
+      {img:'assets/images/gallery/completed/5.webp',name:'Garden Estate',loc:'Kottayam',cat:'completed',sqft:'3800',year:'2024'},
+      {img:'assets/images/gallery/completed/6.webp',name:'Riverside Retreat',loc:'Alappuzha',cat:'completed',sqft:'4500',year:'2023'},
+      {img:'assets/images/gallery/ongoing/1.webp',name:'Skyline Tower',loc:'Kochi',cat:'ongoing',sqft:'8200',year:'2025'},
+      {img:'assets/images/gallery/ongoing/2.webp',name:'Heritage Homestead',loc:'Thrissur',cat:'ongoing',sqft:'3400',year:'2025'},
+      {img:'assets/images/gallery/ongoing/3.webp',name:'Palm Grove Villas',loc:'Kollam',cat:'ongoing',sqft:'5600',year:'2025'},
+      {img:'assets/images/gallery/renovation/1.webp',name:'Heritage Revival',loc:'Kochi',cat:'renovation',sqft:'2200',year:'2024'},
+      {img:'assets/images/gallery/renovation/2.webp',name:'Malabar Manor Restore',loc:'Kozhikode',cat:'renovation',sqft:'3100',year:'2023'},
+      {img:'assets/images/gallery/renovation/3.webp',name:'Backwater Cottage Redo',loc:'Alappuzha',cat:'renovation',sqft:'1800',year:'2024'},
+    ];
+
+    var grid = document.getElementById('gpGrid');
+    var lb = document.getElementById('gpLightbox');
+    var lbImg = document.getElementById('gpLightboxImg');
+    var lbName = document.getElementById('gpLightboxName');
+    var lbLoc = document.getElementById('gpLightboxLoc');
+
+    function renderCards(filter){
+      filter = filter || 'all';
+      var html = '';
+      var count = 0;
+      projects.forEach(function(p,i){
+        if(filter!=='all' && p.cat!==filter) return;
+        count++;
+        html += '<div class="gp-card" data-cat="'+p.cat+'" data-index="'+i+'">'+
+          '<img src="'+p.img+'" alt="'+p.name+'" loading="lazy" />'+
+          '<div class="gp-card-overlay"></div>'+
+          '<div class="gp-card-info">'+
+            '<h3 class="gp-card-name">'+p.name+'</h3>'+
+            '<div class="gp-card-meta">'+
+              '<span class="gp-card-status">'+p.cat+'</span>'+
+              '<span>'+p.loc+'</span>'+
+              '<span>'+p.sqft+' sq.ft</span>'+
+            '</div>'+
+          '</div>'+
+        '</div>';
+      });
+      grid.innerHTML = html + (count===0 ? '<div class="gp-empty visible">No projects found in this category.</div>' : '<div class="gp-empty"></div>');
+      bindCards();
+      animateCards();
+    }
+
+    function bindCards(){
+      grid.querySelectorAll('.gp-card').forEach(function(card){
+        card.addEventListener('click',function(){
+          var idx = parseInt(card.dataset.index);
+          var p = projects[idx];
+          lbImg.src = p.img;
+          lbImg.alt = p.name;
+          lbName.textContent = p.name;
+          lbLoc.textContent = p.loc + '  \u2022  '+p.sqft+' sq.ft  \u2022  '+p.cat;
+          lb.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+    }
+
+    function animateCards(){
+      if(typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined'){
+        gsap.utils.toArray('.gp-card').forEach(function(card,i){
+          gsap.fromTo(card,
+            {opacity:0,y:40},
+            {opacity:1,y:0,duration:.6,ease:'power3.out',delay:i*.06,
+              scrollTrigger:{trigger:card,start:'top 88%',toggleActions:'play none none reverse'}}
+          );
+          card.classList.add('revealed');
+        });
+      }else{
+        grid.querySelectorAll('.gp-card').forEach(function(c){c.classList.add('revealed');});
+      }
+    }
+
+    /* Filters */
+    document.querySelectorAll('.gp-filter-btn').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        document.querySelectorAll('.gp-filter-btn').forEach(function(b){b.classList.remove('active');});
+        btn.classList.add('active');
+        renderCards(btn.dataset.filter);
+      });
+    });
+
+    /* Lightbox */
+    document.getElementById('gpLightboxClose').addEventListener('click',closeLb);
+    document.getElementById('gpLightbox').addEventListener('click',function(e){if(e.target===lb)closeLb();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+    function closeLb(){lb.classList.remove('active');document.body.style.overflow='';}
+
+    /* Featured lightbox trigger */
+    document.querySelector('.gp-lightbox-trigger').addEventListener('click',function(e){
+      e.preventDefault();
+      var t = e.currentTarget;
+      lbImg.src = t.dataset.img;
+      lbName.textContent = t.dataset.name;
+      lbLoc.textContent = t.dataset.loc;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    /* GSAP ScrollTrigger animations for featured section */
+    if(typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined'){
+      gsap.fromTo('.gp-header',{opacity:0,y:30},{opacity:1,y:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:'.gp-header',start:'top 85%',toggleActions:'play none none reverse'}});
+      gsap.fromTo('.gp-featured-image',{opacity:0,x:-40},{opacity:1,x:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:'.gp-featured',start:'top 78%',toggleActions:'play none none reverse'}});
+      gsap.fromTo('.gp-featured-info',{opacity:0,x:40},{opacity:1,x:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:'.gp-featured',start:'top 78%',toggleActions:'play none none reverse'}});
+      gsap.fromTo('.gp-filter-bar',{opacity:0,y:20},{opacity:1,y:0,duration:.6,ease:'power2.out',scrollTrigger:{trigger:'.gp-filter-bar',start:'top 90%',toggleActions:'play none none reverse'}});
+      ScrollTrigger.refresh();
+    }
+
+    /* Initial render */
+    renderCards('all');
+  })();
+  </script>
 
         <!-- Filter bar -->
         <div class="gal-filter-bar">

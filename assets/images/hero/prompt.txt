@@ -1,0 +1,1 @@
+.\ffmpeg.exe -i indexv6.mp4 -q:v 2 -vf "fps=30,scale=1920:-1" frames/frame_%04d.jpg

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building Dreams Into Reality — Luxury Construction</title>
+<meta name="description" content="Watch a luxury modern home rise from foundation to finish, frame by frame.">
+<link rel="preconnect" href="frames/">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="build-section" id="buildSection" aria-label="Construction process showcase">
+
+  <!-- Ambient / decorative layer -->
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-glow"></div>
+    <div class="blueprint-grid"></div>
+    <div class="measure-line measure-line--h"></div>
+    <div class="measure-line measure-line--v"></div>
+    <span class="floating-leaf floating-leaf--1"></span>
+    <span class="floating-leaf floating-leaf--2"></span>
+    <span class="floating-particle floating-particle--1"></span>
+    <span class="floating-particle floating-particle--2"></span>
+    <span class="floating-particle floating-particle--3"></span>
+  </div>
+
+  <div class="build-inner">
+
+    <!-- Animation stage -->
+    <div class="stage" id="stage">
+      <div class="stage-glow" aria-hidden="true"></div>
+      <div class="pedestal" aria-hidden="true">
+        <div class="pedestal-top"></div>
+        <div class="pedestal-shadow"></div>
+      </div>
+
+      <div class="frame-wrap" id="frameWrap">
+        <canvas id="buildCanvas" width="1080" height="1350"
+          role="img"
+          aria-label="Animated sequence of a luxury modern home being constructed, from concrete foundation to a fully completed residence."></canvas>
+        <div class="frame-fade frame-fade--top" aria-hidden="true"></div>
+        <div class="frame-fade frame-fade--bottom" aria-hidden="true"></div>
+        <div class="frame-fade frame-fade--left" aria-hidden="true"></div>
+        <div class="frame-fade frame-fade--right" aria-hidden="true"></div>
+      </div>
+
+      <div class="progress-rail" aria-hidden="true">
+        <div class="progress-rail-fill" id="progressFill"></div>
+      </div>
+
+      <button class="loader" id="loader" type="button" aria-hidden="true" tabindex="-1">
+        <span class="loader-ring"></span>
+        <span class="loader-text">Preparing the site<span id="loaderPct">0%</span></span>
+      </button>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <p class="eyebrow reveal" data-reveal="1">Anchor &amp; Vale Construction</p>
+      <h1 class="heading reveal" data-reveal="2">Building Dreams<br>Into Reality</h1>
+      <p class="subtitle reveal" data-reveal="3">Engineering tomorrow's landmarks</p>
+      <p class="description reveal" data-reveal="4">
+        From the first pour of concrete to the final pane of glass, every residence we
+        build is shaped by precision, restraint, and an obsession with craft.
+        Scroll to watch a single home rise, start to finish.
+      </p>
+
+      <div class="stat-row reveal" data-reveal="5">
+        <div class="stat">
+          <span class="stat-value">18</span>
+          <span class="stat-label">Years building</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-value">240+</span>
+          <span class="stat-label">Homes delivered</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">Client-led design</span>
+        </div>
+      </div>
+
+      <div class="cta-row reveal" data-reveal="6">
+        <button class="btn btn--primary" type="button">
+          <span>Explore Projects</span>
+        </button>
+        <button class="btn btn--ghost" type="button">
+          <span>Get Free Consultation</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
