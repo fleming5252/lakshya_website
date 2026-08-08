@@ -877,12 +877,17 @@
     overlay.classList.add('active');
     pvSection.style.overflow = 'visible';
     const navbar = document.querySelector('.navbar');
-    navbar.classList.add('nav-hidden');
-    navbar.dataset.locked = 'true';
-    pvSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    setTimeout(() => {
-      delete navbar.dataset.locked;
-    }, 800);
+    if (navbar) {
+      navbar.classList.add('nav-hidden');
+      navbar.dataset.locked = 'true';
+      setTimeout(() => { delete navbar.dataset.locked; }, 800);
+    }
+    /* Scroll is handled by the caller when triggered from URL params;
+       otherwise scroll here for in-page button clicks */
+    if (!openProjectDetail._instant) {
+      pvSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    openProjectDetail._instant = false;
     tourIndex = 0;
     buildTourProgress();
     setTourStep(0);
@@ -1077,7 +1082,28 @@
     if (img) openTourLightbox(img.src, img.alt);
   });
 
-  load('completed');
+  var params = new URLSearchParams(window.location.search);
+  var initType = params.get('type');
+  var initIdx  = parseInt(params.get('idx'));
+  if (initType && (initType === 'completed' || initType === 'ongoing')) {
+    load(initType);
+    if (!isNaN(initIdx)) { activeIndex = initIdx % projects[initType].length; setHero(activeIndex); }
+    /* Wait for full page paint + GSAP before opening detail and scrolling */
+    window.addEventListener('load', function () {
+      openProjectDetail._instant = true;
+      openProjectDetail();
+      /* Use a short timeout so the overlay has rendered before we measure & scroll */
+      setTimeout(function () {
+        var pvSec = document.querySelector('.pv-section');
+        if (pvSec) {
+          var top = pvSec.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo(0, top);
+        }
+      }, 100);
+    });
+  } else {
+    load('completed');
+  }
 })();
 </script>
 <!-- Floating Contact Button -->

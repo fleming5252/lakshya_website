@@ -925,62 +925,144 @@
       if (btnPrev) btnPrev.addEventListener('click', showRandom);
       if (btnNext) btnNext.addEventListener('click', showRandom);
     })();
-    </script>
+    </script><!-- ── PREMIUM GALLERY ── -->
+<section class="gp-section" id="gpSection">
+  <div class="gp-container">
 
-    <!-- â”€â”€ PREMIUM GALLERY â”€â”€ -->
-    <section class="gp-section" id="gpSection">
-      <div class="gp-container">
-        <!-- Header -->
-        <div class="gp-header">
-          <p class="gp-eyebrow"><span class="gp-diamond">✦</span> Our Portfolio</p>
-          <h2 class="gp-headline">CRAFTING <span class="gp-headline-green">EXCELLENCE</span></h2>
-          <div class="gp-divider"><span></span></div>
-          <p class="gp-desc">Every project tells a story of precision, passion, and perfection â€” explore our handpicked works.</p>
+    <!-- Header -->
+    <div class="gp-header">
+      <p class="gp-eyebrow"><span class="gp-diamond">✦</span> Our Portfolio</p>
+      <h2 class="gp-headline">CRAFTING <span class="gp-headline-green">EXCELLENCE</span></h2>
+      <div class="gp-divider"><span></span></div>
+      <p class="gp-desc">Every project tells a story of precision, passion, and perfection — explore our handpicked works.</p>
+    </div>
+
+    <!-- Featured Project -->
+    <div class="gp-featured">
+      <div class="gp-featured-image">
+        <img src="assets/images/gallery/completed/1.webp" alt="Featured Project" loading="eager" id="gpFeatImg" />
+      </div>
+      <div class="gp-featured-info">
+        <span class="gp-badge" id="gpFeatBadge">HIGHLIGHTS</span>
+        <h3 class="gp-featured-title" id="gpFeatTitle">Modern Villa Residency</h3>
+        <p class="gp-featured-loc" id="gpFeatLoc">Alappuzha, Kerala</p>
+        <p class="gp-featured-desc" id="gpFeatDesc">A stunning contemporary villa blending modern architecture with traditional Kerala aesthetics.</p>
+        <div class="gp-featured-meta">
+          <div><strong id="gpFeatSqft">4,200</strong><span>sq.ft</span></div>
+          <div class="gp-meta-div"></div>
+          <div><strong id="gpFeatYear">2024</strong><span id="gpFeatCat">Completed</span></div>
         </div>
+        <a href="#" class="gp-btn-primary gp-lightbox-trigger"
+           data-img="assets/images/gallery/completed/1.webp"
+           data-name="Modern Villa Residency"
+           data-loc="Alappuzha, Kerala">
+          <span>View Project</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+    </div>
 
-        <!-- Featured Project -->
-        <div class="gp-featured">
-          <div class="gp-featured-image">
-            <img src="assets/images/gallery/completed/1.webp" alt="Featured Project" loading="eager" />
+    <!-- Filter Bar -->
+    <div class="gp-filter-bar" role="group" aria-label="Filter projects by category">
+      <div class="gp-filter-track" aria-hidden="true">
+        <div class="gp-filter-pill" id="gpFilterPill"></div>
+      </div>
+      <button class="gp-filter-btn active" data-filter="all">All Projects</button>
+      <button class="gp-filter-btn" data-filter="completed">Completed</button>
+      <button class="gp-filter-btn" data-filter="ongoing">Ongoing</button>
+      <button class="gp-filter-btn" data-filter="renovation">Renovation</button>
+    </div>
+
+    <!-- Counter + Nav row -->
+    <div class="gp-toolbar">
+      <div class="gp-counter" id="gpCounter" aria-live="polite">
+        <span id="gpCounterCurrent">1–4</span>
+        <span class="gp-counter-sep">/</span>
+        <span id="gpCounterTotal">36</span>
+      </div>
+      <div class="gp-nav">
+        <button class="gp-nav-btn" id="gpNavPrev" aria-label="Previous projects">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="gp-nav-btn" id="gpNavNext" aria-label="Next projects">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- THE STAGE -->
+    <div class="gp-stage" id="gpStage">
+      <div class="gp-conveyor" id="gpConveyor">
+        <div class="gp-card" data-slot="0" tabindex="0" role="button" aria-label="View project">
+          <div class="gp-card-img"><img src="" alt="" loading="lazy" /></div>
+          <div class="gp-card-overlay"></div>
+          <div class="gp-card-info">
+            <span class="gp-card-cat"></span>
+            <h3 class="gp-card-name"></h3>
+            <p class="gp-card-loc">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span></span>
+            </p>
           </div>
-          <div class="gp-featured-info">
-            <span class="gp-badge">HIGHLIGHTS</span>
-            <h3 class="gp-featured-title">Modern Villa Residency</h3>
-            <p class="gp-featured-loc">Alappuzha, Kerala</p>
-            <p class="gp-featured-desc">A stunning contemporary villa blending modern architecture with traditional Kerala aesthetics.</p>
-            <div class="gp-featured-meta">
-              <div><strong>4,200</strong><span>sq.ft</span></div>
-              <div class="gp-meta-div"></div>
-              <div><strong>2024</strong><span>Completed</span></div>
-            </div>
-            <a href="#" class="gp-btn-primary gp-lightbox-trigger" data-img="assets/images/gallery/completed/1.webp" data-name="Modern Villa Residency" data-loc="Alappuzha, Kerala">
-              <span>View Project</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+        </div>
+        <div class="gp-card" data-slot="1" tabindex="0" role="button" aria-label="View project">
+          <div class="gp-card-img"><img src="" alt="" loading="lazy" /></div>
+          <div class="gp-card-overlay"></div>
+          <div class="gp-card-info">
+            <span class="gp-card-cat"></span>
+            <h3 class="gp-card-name"></h3>
+            <p class="gp-card-loc">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span></span>
+            </p>
           </div>
         </div>
-
-        <!-- Filter Bar -->
-        <div class="gp-filter-bar">
-          <button class="gp-filter-btn active" data-filter="all">All Projects</button>
-          <button class="gp-filter-btn" data-filter="completed">Completed</button>
-          <button class="gp-filter-btn" data-filter="ongoing">Ongoing</button>
-          <button class="gp-filter-btn" data-filter="renovation">Renovation</button>
+        <div class="gp-card" data-slot="2" tabindex="0" role="button" aria-label="View project">
+          <div class="gp-card-img"><img src="" alt="" loading="lazy" /></div>
+          <div class="gp-card-overlay"></div>
+          <div class="gp-card-info">
+            <span class="gp-card-cat"></span>
+            <h3 class="gp-card-name"></h3>
+            <p class="gp-card-loc">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span></span>
+            </p>
+          </div>
         </div>
-
-        <!-- Scroll Grid -->
-        <div class="gp-scroll-grid-wrap" id="gpScrollGridWrap">
-          <div class="gp-scroll-grid" id="gpScrollGrid">
-            <div class="gp-sg-cell"><img src="" alt="" /></div>
-            <div class="gp-sg-cell"><img src="" alt="" /></div>
-            <div class="gp-sg-cell"><img src="" alt="" /></div>
-            <div class="gp-sg-cell"><img src="" alt="" /></div>
+        <div class="gp-card" data-slot="3" tabindex="0" role="button" aria-label="View project">
+          <div class="gp-card-img"><img src="" alt="" loading="lazy" /></div>
+          <div class="gp-card-overlay"></div>
+          <div class="gp-card-info">
+            <span class="gp-card-cat"></span>
+            <h3 class="gp-card-name"></h3>
+            <p class="gp-card-loc">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span></span>
+            </p>
+          </div>
+        </div>
+        <!-- Ghost card — the newcomer, always starts offscreen -->
+        <div class="gp-card gp-card--ghost" data-slot="4" tabindex="-1" aria-hidden="true">
+          <div class="gp-card-img"><img src="" alt="" loading="lazy" /></div>
+          <div class="gp-card-overlay"></div>
+          <div class="gp-card-info">
+            <span class="gp-card-cat"></span>
+            <h3 class="gp-card-name"></h3>
+            <p class="gp-card-loc">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span></span>
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Lightbox -->
+  </div>
+</section>
+
+<!-- Lightbox -->
     <div class="gp-lightbox" id="gpLightbox">
       <button class="gp-lightbox-close" id="gpLightboxClose">&times;</button>
       <div class="gp-lightbox-content">
@@ -998,245 +1080,473 @@
   <div id="footer-placeholder"></div>
 
   <style>
-  .gp-section{background:#FAFAFA;padding:5rem 2rem 6rem;}
-  .gp-container{max-width:1280px;margin:0 auto;}
-  .gp-header{text-align:center;margin-bottom:4rem;}
-  .gp-eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.2em;color:#5E7C6A;text-transform:uppercase;margin-bottom:1rem;}
-  .gp-diamond{font-size:.8rem;}
-  .gp-headline{font-family:'Poltawski Nowy',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:900;color:#1a1610;line-height:1.05;margin-bottom:1rem;}
-  .gp-headline-green{color:#5E7C6A;}
-  .gp-divider{display:flex;justify-content:center;margin-bottom:1.2rem;}
-  .gp-divider span{display:block;width:48px;height:3px;background:#5E7C6A;border-radius:2px;}
-  .gp-desc{font-size:.92rem;color:#6F6F6F;max-width:540px;margin:0 auto;line-height:1.65;}
+/* ── Section ── */
+.gp-section {
+  background: #F7F6F2;
+  padding: 6rem 2rem 7rem;
+}
+.gp-container { max-width: 1280px; margin: 0 auto; }
+/* ── Header ── */
+.gp-header { text-align: center; margin-bottom: 4.5rem; }
+.gp-eyebrow {
+  font-size: .72rem; font-weight: 700; letter-spacing: .22em;
+  color: #5E7C6A; text-transform: uppercase; margin-bottom: 1rem;
+}
+.gp-diamond { font-size: .8rem; }
+.gp-headline {
+  font-family: ''Poltawski Nowy'', serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 900; color: #1a1610;
+  line-height: 1.05; margin-bottom: 1rem; letter-spacing: -.01em;
+}
+.gp-headline-green { color: #5E7C6A; }
+.gp-divider { display: flex; justify-content: center; margin-bottom: 1.2rem; }
+.gp-divider span { display: block; width: 40px; height: 2px; background: #5E7C6A; }
+.gp-desc { font-size: .9rem; color: #777; max-width: 520px; margin: 0 auto; line-height: 1.7; }
+/* ── Featured ── */
+.gp-featured {
+  display: grid; grid-template-columns: 1.1fr 1fr;
+  gap: 3rem; align-items: center; margin-bottom: 5rem;
+  background: #fff; border-radius: 20px; overflow: hidden;
+  box-shadow: 0 2px 32px rgba(0,0,0,.05);
+}
+.gp-featured-image { position: relative; aspect-ratio: 4/3; overflow: hidden; }
+.gp-featured-image img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .7s cubic-bezier(.25,.46,.45,.94);
+}
+.gp-featured:hover .gp-featured-image img { transform: scale(1.04); }
+.gp-featured-info { padding: 2.5rem 3rem 2.5rem 0; }
+.gp-badge {
+  display: inline-block; font-size: .68rem; font-weight: 700;
+  letter-spacing: .14em; color: #5E7C6A; text-transform: uppercase;
+  background: rgba(94,124,106,.1); padding: .3rem .85rem;
+  border-radius: 99px; margin-bottom: 1.1rem;
+}
+.gp-featured-title {
+  font-family: ''Poltawski Nowy'', serif;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-weight: 800; color: #1a1610; margin-bottom: .55rem;
+}
+.gp-featured-loc { font-size: .82rem; color: #888; margin-bottom: 1rem; }
+.gp-featured-desc { font-size: .87rem; color: #555; line-height: 1.68; margin-bottom: 1.5rem; }
+.gp-featured-meta { display: flex; align-items: center; gap: 1.6rem; margin-bottom: 1.8rem; }
+.gp-featured-meta div strong {
+  display: block; font-family: ''Poltawski Nowy'', serif;
+  font-size: 1.45rem; font-weight: 800; color: #1a1610; line-height: 1;
+}
+.gp-featured-meta div span { font-size: .72rem; color: #999; }
+.gp-meta-div { width: 1px; height: 32px; background: rgba(0,0,0,.08); }
+.gp-btn-primary {
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .65rem 1.5rem; background: #5E7C6A; color: #fff;
+  font-weight: 700; font-size: .8rem; letter-spacing: .05em;
+  border-radius: 6px; text-decoration: none;
+  transition: background .2s, transform .15s; border: none; cursor: pointer;
+}
+.gp-btn-primary:hover { background: #4F6656; transform: translateY(-2px); }
+/* ── Filter Bar ── */
+.gp-filter-bar {
+  position: relative; display: flex; justify-content: center; gap: 0;
+  margin-bottom: 1.6rem; background: #fff;
+  border: 1px solid rgba(0,0,0,.07); border-radius: 99px;
+  padding: 5px; width: fit-content;
+  margin-left: auto; margin-right: auto; flex-wrap: nowrap;
+}
+.gp-filter-track { position: absolute; inset: 5px; pointer-events: none; }
+.gp-filter-pill {
+  position: absolute; top: 0; left: 0; height: 100%;
+  background: #5E7C6A; border-radius: 99px;
+  transition: left .38s cubic-bezier(.4,0,.2,1), width .38s cubic-bezier(.4,0,.2,1);
+  will-change: left, width;
+}
+.gp-filter-btn {
+  position: relative; z-index: 1;
+  padding: .5rem 1.3rem; border: none; background: transparent;
+  border-radius: 99px; font-size: .78rem; font-weight: 600;
+  color: #666; cursor: pointer; transition: color .25s;
+  letter-spacing: .04em; white-space: nowrap; min-height: 44px; outline: none;
+}
+.gp-filter-btn:focus-visible { outline: 2px solid #5E7C6A; outline-offset: 2px; }
+.gp-filter-btn.active { color: #fff; }
+.gp-filter-btn:not(.active):hover { color: #5E7C6A; }
+/* ── Toolbar (counter + nav) ── */
+.gp-toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 1.4rem;
+}
+.gp-counter {
+  display: flex; align-items: center; gap: .35rem;
+  font-size: .74rem; color: #aaa; letter-spacing: .1em; font-weight: 600;
+}
+.gp-counter-sep { color: #ddd; }
+.gp-nav { display: flex; gap: .5rem; }
+.gp-nav-btn {
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1.5px solid rgba(0,0,0,.12); background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: #555;
+  transition: border-color .22s, color .22s, transform .22s, box-shadow .22s;
+  outline: none;
+}
+.gp-nav-btn:focus-visible { outline: 2px solid #5E7C6A; outline-offset: 2px; }
+.gp-nav-btn:hover {
+  border-color: #5E7C6A; color: #5E7C6A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(94,124,106,.16);
+}
+.gp-nav-btn:active { transform: scale(.94); }
+.gp-nav-btn[disabled] { opacity: .28; pointer-events: none; }
+.gp-stage {
+  position: relative;
+  width: 88%;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  max-height: 82vh;
+  min-height: 380px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.gp-conveyor {
+  position: absolute;
+  inset: 0;
+}
+.gp-card {
+  position: absolute;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #dedad4;
+  will-change: transform, opacity;
+}
+.gp-card--ghost {
+  pointer-events: none;
+  cursor: default;
+}
+.gp-card-img {
+  position: absolute; inset: 0;
+}
+.gp-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform .65s cubic-bezier(.25,.46,.45,.94);
+  will-change: transform;
+}
+.gp-card:hover .gp-card-img img { transform: scale(1.055); }
+.gp-card-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(12,11,8,.76) 0%,
+    rgba(12,11,8,.22) 40%,
+    transparent 68%
+  );
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity .38s ease;
+  pointer-events: none;
+}
+.gp-card:hover .gp-card-overlay { opacity: 1; }
+.gp-card-info {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 1rem 1rem .9rem;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform .36s cubic-bezier(.25,.46,.45,.94), opacity .36s ease;
+  pointer-events: none;
+}
+.gp-card:hover .gp-card-info {
+  transform: translateY(0); opacity: 1; pointer-events: auto;
+}
+.gp-card-cat {
+  display: block; font-size: .58rem; font-weight: 700;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(255,255,255,.6); margin-bottom: .22rem;
+}
+.gp-card-name {
+  font-family: ''Poltawski Nowy'', serif;
+  font-size: clamp(.76rem, 1vw, .95rem);
+  font-weight: 700; color: #fff; line-height: 1.22; margin-bottom: .28rem;
+}
+.gp-card-loc {
+  display: flex; align-items: center; gap: .28rem;
+  font-size: .64rem; color: rgba(255,255,255,.55);
+}
+.gp-card-loc svg { flex-shrink: 0; }
+.gp-stage { --card-gap: 2rem; }
+@media (max-width: 900px) { .gp-stage { --card-gap: 1rem; } }
+@media (max-width: 600px) { .gp-stage { --card-gap: .7rem; } }
+.gp-lightbox {
+  position: fixed; inset: 0; background: rgba(0,0,0,.94);
+  z-index: 1000; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity .3s;
+}
+.gp-lightbox.active { opacity: 1; pointer-events: all; }
+.gp-lightbox img {
+  max-width: 90vw; max-height: 80vh;
+  border-radius: 10px; object-fit: contain;
+}
+.gp-lightbox-close {
+  position: absolute; top: 1.5rem; right: 2rem;
+  background: none; border: none; color: #fff;
+  font-size: 2.5rem; cursor: pointer; opacity: .65; transition: opacity .2s;
+}
+.gp-lightbox-close:hover { opacity: 1; }
+.gp-lightbox-info { margin-top: 1rem; text-align: center; }
+.gp-lightbox-info strong { display: block; color: #fff; font-size: 1rem; font-weight: 700; }
+.gp-lightbox-info span { color: rgba(255,255,255,.45); font-size: .8rem; }
+@media (max-width: 900px) {
+  .gp-featured { grid-template-columns: 1fr; gap: 0; }
+  .gp-featured-info { padding: 1.6rem; }
+  .gp-stage { min-height: 300px; }
+  .gp-filter-btn { padding: .45rem 1rem; font-size: .76rem; }
+}
+@media (max-width: 600px) {
+  .gp-section { padding: 3.5rem 1.2rem 5.5rem; }
+  .gp-stage { min-height: 240px; aspect-ratio: 4/5; }
+  .gp-filter-bar { flex-wrap: wrap; border-radius: 16px; width: auto; }
+  .gp-card-name { font-size: .72rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gp-card, .gp-card-img img, .gp-card-overlay, .gp-card-info,
+  .gp-filter-pill { transition: none !important; animation: none !important; }
+}
+</style>
+<script>
+/* ── PREMIUM GALLERY — conveyor-belt Z-slide ── */
+(function () {
+  'use strict';
+  var projects = [
+    {img:'assets/images/gallery/completed/1.webp',  name:'Modern Villa Residency',  loc:'Alappuzha',          cat:'completed', sqft:'4200', year:'2024'},
+    {img:'assets/images/gallery/completed/2.webp',  name:'Coastal Luxury Home',     loc:'Kozhikode',          cat:'completed', sqft:'3600', year:'2024'},
+    {img:'assets/images/gallery/completed/3.webp',  name:'Lakeside Residence',      loc:'Kottayam',           cat:'completed', sqft:'5100', year:'2023'},
+    {img:'assets/images/gallery/completed/4.webp',  name:'Luxury Residence',        loc:'Kochi',              cat:'completed', sqft:'4600', year:'2024'},
+    {img:'assets/images/gallery/completed/5.webp',  name:'Hill View Bungalow',      loc:'Munnar',             cat:'completed', sqft:'3800', year:'2024'},
+    {img:'assets/images/gallery/completed/6.webp',  name:'Garden Estate',           loc:'Thrissur',           cat:'completed', sqft:'4100', year:'2023'},
+    {img:'assets/images/gallery/completed/7.webp',  name:'Riverside Villa',         loc:'Kollam',             cat:'completed', sqft:'3500', year:'2023'},
+    {img:'assets/images/gallery/completed/8.webp',  name:'Twin Towers Office',      loc:'Ernakulam',          cat:'completed', sqft:'7200', year:'2024'},
+    {img:'assets/images/gallery/completed/9.webp',  name:'Coastal Retreat',         loc:'Varkala',            cat:'completed', sqft:'3900', year:'2023'},
+    {img:'assets/images/gallery/completed/10.webp', name:'Palm Grove House',        loc:'Palakkad',           cat:'completed', sqft:'3200', year:'2024'},
+    {img:'assets/images/gallery/completed/11.webp', name:'Skyline Apartments',      loc:'Thiruvananthapuram', cat:'completed', sqft:'6800', year:'2024'},
+    {img:'assets/images/gallery/completed/12.webp', name:'Spice Garden Villa',      loc:'Wayanad',            cat:'completed', sqft:'3400', year:'2023'},
+    {img:'assets/images/gallery/ongoing/1.webp',    name:'Apartment Complex',       loc:'Thrissur',           cat:'ongoing',   sqft:'8200', year:'2025'},
+    {img:'assets/images/gallery/ongoing/2.webp',    name:'Tech Park Tower',         loc:'Kochi',              cat:'ongoing',   sqft:'12000',year:'2025'},
+    {img:'assets/images/gallery/ongoing/3.webp',    name:'Marina Residency',        loc:'Kozhikode',          cat:'ongoing',   sqft:'5600', year:'2025'},
+    {img:'assets/images/gallery/ongoing/4.webp',    name:'Greenfield Township',     loc:'Kottayam',           cat:'ongoing',   sqft:'9400', year:'2025'},
+    {img:'assets/images/gallery/ongoing/5.webp',    name:'Heritage Mall',           loc:'Ernakulam',          cat:'ongoing',   sqft:'15000',year:'2025'},
+    {img:'assets/images/gallery/ongoing/6.webp',    name:'Hilltop Villas',          loc:'Munnar',             cat:'ongoing',   sqft:'6100', year:'2025'},
+    {img:'assets/images/gallery/ongoing/7.webp',    name:'Backwater Resort',        loc:'Alappuzha',          cat:'ongoing',   sqft:'8800', year:'2025'},
+    {img:'assets/images/gallery/ongoing/8.webp',    name:'Central Plaza',           loc:'Thiruvananthapuram', cat:'ongoing',   sqft:'11000',year:'2025'},
+    {img:'assets/images/gallery/ongoing/9.webp',    name:'Coconut Grove Homes',     loc:'Kollam',             cat:'ongoing',   sqft:'4800', year:'2025'},
+    {img:'assets/images/gallery/ongoing/10.webp',   name:'Westside Enclave',        loc:'Palakkad',           cat:'ongoing',   sqft:'5200', year:'2025'},
+    {img:'assets/images/gallery/ongoing/11.webp',   name:'Sunrise Towers',          loc:'Kannur',             cat:'ongoing',   sqft:'7300', year:'2025'},
+    {img:'assets/images/gallery/ongoing/12.webp',   name:'Spice Route Complex',     loc:'Wayanad',            cat:'ongoing',   sqft:'6700', year:'2025'},
+    {img:'assets/images/gallery/renovation/1.webp', name:'Heritage Renovation',     loc:'Kochi',              cat:'renovation',sqft:'2200', year:'2024'},
+    {img:'assets/images/gallery/renovation/2.webp', name:'Interior Renovation',     loc:'Kannur',             cat:'renovation',sqft:'1800', year:'2023'},
+    {img:'assets/images/gallery/renovation/3.webp', name:'Colonial Makeover',       loc:'Alappuzha',          cat:'renovation',sqft:'2600', year:'2024'},
+    {img:'assets/images/gallery/renovation/4.webp', name:'Old Town Refresh',        loc:'Kozhikode',          cat:'renovation',sqft:'2100', year:'2024'},
+    {img:'assets/images/gallery/renovation/5.webp', name:'Teak House Restore',      loc:'Kottayam',           cat:'renovation',sqft:'2900', year:'2023'},
+    {img:'assets/images/gallery/renovation/6.webp', name:'Nalukettu Revival',       loc:'Thrissur',           cat:'renovation',sqft:'3400', year:'2024'},
+    {img:'assets/images/gallery/renovation/7.webp', name:'Vintage Bungalow Redo',   loc:'Munnar',             cat:'renovation',sqft:'3100', year:'2023'},
+    {img:'assets/images/gallery/renovation/8.webp', name:'Courtyard Home Upgrade',  loc:'Ernakulam',          cat:'renovation',sqft:'2400', year:'2024'},
+    {img:'assets/images/gallery/renovation/9.webp', name:'Fort Road Facelift',      loc:'Thiruvananthapuram', cat:'renovation',sqft:'2700', year:'2023'},
+    {img:'assets/images/gallery/renovation/10.webp',name:'Pepper House Rework',     loc:'Kollam',             cat:'renovation',sqft:'1900', year:'2024'},
+    {img:'assets/images/gallery/renovation/11.webp',name:'Malabar Manor Restore',   loc:'Palakkad',           cat:'renovation',sqft:'3200', year:'2024'},
+    {img:'assets/images/gallery/renovation/12.webp',name:'Backwater Cottage Redo',  loc:'Wayanad',            cat:'renovation',sqft:'2000', year:'2023'},
+  ];
+  var stage     = document.getElementById('gpStage');
+  var conveyor  = document.getElementById('gpConveyor');
+  var cards     = Array.from(conveyor.querySelectorAll('.gp-card'));
+  var lb        = document.getElementById('gpLightbox');
+  var lbImg     = document.getElementById('gpLightboxImg');
+  var lbName    = document.getElementById('gpLightboxName');
+  var lbLoc     = document.getElementById('gpLightboxLoc');
+  var btnPrev      = document.getElementById('gpNavPrev');
+  var btnNext      = document.getElementById('gpNavNext');
+  var filterBtns   = Array.from(document.querySelectorAll('.gp-filter-btn'));
+  var filterPill   = document.getElementById('gpFilterPill');
+  var cntCurrent   = document.getElementById('gpCounterCurrent');
+  var cntTotal     = document.getElementById('gpCounterTotal');
+  var currentFilter = 'all';
+  var currentStart  = 0;
+  var isAnimating   = false;
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var featProject   = null;
 
-  /* Featured */
-  .gp-featured{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center;margin-bottom:5rem;background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 4px 40px rgba(0,0,0,.06);}
-  .gp-featured-image{position:relative;aspect-ratio:4/3;overflow:hidden;}
-  .gp-featured-image img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
-  .gp-featured:hover .gp-featured-image img{transform:scale(1.04);}
-  .gp-featured-fade{position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,rgba(250,250,250,.4));pointer-events:none;}
-  .gp-featured-info{padding:2.5rem 3rem 2.5rem 0;}
-  .gp-badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.12em;color:#5E7C6A;text-transform:uppercase;background:rgba(94,124,106,.1);padding:.35rem .9rem;border-radius:99px;margin-bottom:1.2rem;}
-  .gp-featured-title{font-family:'Poltawski Nowy',serif;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;color:#1a1610;margin-bottom:.6rem;}
-  .gp-featured-loc{font-size:.85rem;color:#6F6F6F;margin-bottom:1rem;display:flex;align-items:center;gap:.4rem;}
-  .gp-featured-desc{font-size:.88rem;color:#555;line-height:1.65;margin-bottom:1.6rem;}
-  .gp-featured-meta{display:flex;align-items:center;gap:1.8rem;margin-bottom:1.8rem;}
-  .gp-featured-meta div strong{display:block;font-family:'Poltawski Nowy',serif;font-size:1.5rem;font-weight:800;color:#1a1610;line-height:1;}
-  .gp-featured-meta div span{font-size:.75rem;color:#888;}
-  .gp-meta-div{width:1px;height:36px;background:rgba(0,0,0,.1);}
-  .gp-btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.6rem;background:#5E7C6A;color:#fff;font-weight:700;font-size:.82rem;letter-spacing:.04em;border-radius:8px;text-decoration:none;transition:background .2s,transform .15s;border:none;cursor:pointer;}
-  .gp-btn-primary:hover{background:#4F6656;transform:translateY(-2px);}
-
-  /* Filter */
-  .gp-filter-bar{display:flex;justify-content:center;gap:.6rem;margin-bottom:3rem;flex-wrap:wrap;}
-  .gp-filter-btn{padding:.55rem 1.4rem;border:1.5px solid rgba(0,0,0,.1);background:#fff;border-radius:99px;font-size:.8rem;font-weight:600;color:#555;cursor:pointer;transition:all .25s;letter-spacing:.03em;}
-  .gp-filter-btn:hover{border-color:#5E7C6A;color:#5E7C6A;}
-  .gp-filter-btn.active{background:#5E7C6A;color:#fff;border-color:#5E7C6A;}
-
-  /* Scroll Grid */
-  .gp-scroll-grid-wrap{overflow:visible;touch-action:none;position:relative;margin-bottom:2rem;display:flex;justify-content:center;}
-  .gp-scroll-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:1.6rem;aspect-ratio:16/9;max-height:86vh;min-height:360px;}
-  .gp-sg-cell{position:relative;overflow:visible;border-radius:16px;cursor:pointer;background:#e8e8e8;aspect-ratio:16/9;}
-  .gp-sg-cell img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform,opacity;}
-
-  /* Lightbox */
-  .gp-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
-  .gp-lightbox.active{opacity:1;pointer-events:all;}
-  .gp-lightbox img{max-width:90vw;max-height:80vh;border-radius:12px;object-fit:contain;}
-  .gp-lightbox-close{position:absolute;top:1.5rem;right:2rem;background:none;border:none;color:#fff;font-size:2.5rem;cursor:pointer;}
-  .gp-lightbox-info{margin-top:1rem;text-align:center;}
-  .gp-lightbox-info strong{display:block;color:#fff;font-size:1rem;font-weight:700;}
-  .gp-lightbox-info span{color:rgba(255,255,255,.5);font-size:.82rem;}
-
-  @media(max-width:900px){
-    .gp-featured{grid-template-columns:1fr;gap:0;}
-    .gp-featured-info{padding:1.5rem;}
-    .gp-scroll-grid{min-height:280px;gap:.8rem;}
-  }
-  @media(max-width:600px){
-    .gp-section{padding:3rem 1.2rem 4rem;}
-    .gp-scroll-grid{min-height:220px;aspect-ratio:3/4;gap:.6rem;}
-  }
-  </style>
-
-  <script>
-  /* â”€â”€ PREMIUM GALLERY â”€â”€ */
-  (function(){
-    var projects = [
-      {img:'assets/images/gallery/completed/1.webp',name:'Modern Villa Residency',loc:'Alappuzha',cat:'completed',sqft:'4200',year:'2024'},
-      {img:'assets/images/gallery/completed/2.webp',name:'Coastal Luxury Home',loc:'Kozhikode',cat:'completed',sqft:'3600',year:'2024'},
-      {img:'assets/images/gallery/completed/3.webp',name:'Lakeside Residence',loc:'Kottayam',cat:'completed',sqft:'5100',year:'2023'},
-      {img:'assets/images/gallery/completed/4.webp',name:'Luxury Residence',loc:'Kochi',cat:'completed',sqft:'4600',year:'2024'},
-      {img:'assets/images/gallery/completed/5.webp',name:'Hill View Bungalow',loc:'Munnar',cat:'completed',sqft:'3800',year:'2024'},
-      {img:'assets/images/gallery/completed/6.webp',name:'Garden Estate',loc:'Thrissur',cat:'completed',sqft:'4100',year:'2023'},
-      {img:'assets/images/gallery/completed/7.webp',name:'Riverside Villa',loc:'Kollam',cat:'completed',sqft:'3500',year:'2023'},
-      {img:'assets/images/gallery/completed/8.webp',name:'Twin Towers Office',loc:'Ernakulam',cat:'completed',sqft:'7200',year:'2024'},
-      {img:'assets/images/gallery/completed/9.webp',name:'Coastal Retreat',loc:'Varkala',cat:'completed',sqft:'3900',year:'2023'},
-      {img:'assets/images/gallery/completed/10.webp',name:'Palm Grove House',loc:'Palakkad',cat:'completed',sqft:'3200',year:'2024'},
-      {img:'assets/images/gallery/completed/11.webp',name:'Skyline Apartments',loc:'Thiruvananthapuram',cat:'completed',sqft:'6800',year:'2024'},
-      {img:'assets/images/gallery/completed/12.webp',name:'Spice Garden Villa',loc:'Wayanad',cat:'completed',sqft:'3400',year:'2023'},
-      {img:'assets/images/gallery/ongoing/1.webp',name:'Apartment Complex',loc:'Thrissur',cat:'ongoing',sqft:'8200',year:'2025'},
-      {img:'assets/images/gallery/ongoing/2.webp',name:'Tech Park Tower',loc:'Kochi',cat:'ongoing',sqft:'12000',year:'2025'},
-      {img:'assets/images/gallery/ongoing/3.webp',name:'Marina Residency',loc:'Kozhikode',cat:'ongoing',sqft:'5600',year:'2025'},
-      {img:'assets/images/gallery/ongoing/4.webp',name:'Greenfield Township',loc:'Kottayam',cat:'ongoing',sqft:'9400',year:'2025'},
-      {img:'assets/images/gallery/ongoing/5.webp',name:'Heritage Mall',loc:'Ernakulam',cat:'ongoing',sqft:'15000',year:'2025'},
-      {img:'assets/images/gallery/ongoing/6.webp',name:'Hilltop Villas',loc:'Munnar',cat:'ongoing',sqft:'6100',year:'2025'},
-      {img:'assets/images/gallery/ongoing/7.webp',name:'Backwater Resort',loc:'Alappuzha',cat:'ongoing',sqft:'8800',year:'2025'},
-      {img:'assets/images/gallery/ongoing/8.webp',name:'Central Plaza',loc:'Thiruvananthapuram',cat:'ongoing',sqft:'11000',year:'2025'},
-      {img:'assets/images/gallery/ongoing/9.webp',name:'Coconut Grove Homes',loc:'Kollam',cat:'ongoing',sqft:'4800',year:'2025'},
-      {img:'assets/images/gallery/ongoing/10.webp',name:'Westside Enclave',loc:'Palakkad',cat:'ongoing',sqft:'5200',year:'2025'},
-      {img:'assets/images/gallery/ongoing/11.webp',name:'Sunrise Towers',loc:'Kannur',cat:'ongoing',sqft:'7300',year:'2025'},
-      {img:'assets/images/gallery/ongoing/12.webp',name:'Spice Route Complex',loc:'Wayanad',cat:'ongoing',sqft:'6700',year:'2025'},
-      {img:'assets/images/gallery/renovation/1.webp',name:'Heritage Renovation',loc:'Kochi',cat:'renovation',sqft:'2200',year:'2024'},
-      {img:'assets/images/gallery/renovation/2.webp',name:'Interior Renovation',loc:'Kannur',cat:'renovation',sqft:'1800',year:'2023'},
-      {img:'assets/images/gallery/renovation/3.webp',name:'Colonial Makeover',loc:'Alappuzha',cat:'renovation',sqft:'2600',year:'2024'},
-      {img:'assets/images/gallery/renovation/4.webp',name:'Old Town Refresh',loc:'Kozhikode',cat:'renovation',sqft:'2100',year:'2024'},
-      {img:'assets/images/gallery/renovation/5.webp',name:'Teak House Restore',loc:'Kottayam',cat:'renovation',sqft:'2900',year:'2023'},
-      {img:'assets/images/gallery/renovation/6.webp',name:'Nalukettu Revival',loc:'Thrissur',cat:'renovation',sqft:'3400',year:'2024'},
-      {img:'assets/images/gallery/renovation/7.webp',name:'Vintage Bungalow Redo',loc:'Munnar',cat:'renovation',sqft:'3100',year:'2023'},
-      {img:'assets/images/gallery/renovation/8.webp',name:'Courtyard Home Upgrade',loc:'Ernakulam',cat:'renovation',sqft:'2400',year:'2024'},
-      {img:'assets/images/gallery/renovation/9.webp',name:'Fort Road Facelift',loc:'Thiruvananthapuram',cat:'renovation',sqft:'2700',year:'2023'},
-      {img:'assets/images/gallery/renovation/10.webp',name:'Pepper House Rework',loc:'Kollam',cat:'renovation',sqft:'1900',year:'2024'},
-      {img:'assets/images/gallery/renovation/11.webp',name:'Malabar Manor Restore',loc:'Palakkad',cat:'renovation',sqft:'3200',year:'2024'},
-      {img:'assets/images/gallery/renovation/12.webp',name:'Backwater Cottage Redo',loc:'Wayanad',cat:'renovation',sqft:'2000',year:'2023'},
+  function getSlotRects() {
+    var W = stage.offsetWidth;
+    var H = stage.offsetHeight;
+    var gapPx = parseFloat(getComputedStyle(stage).getPropertyValue('--card-gap')) || 22;
+    var rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    var gap = gapPx * rootFontSize;
+    if (gapPx > 3) gap = gapPx;
+    var cW = (W - gap) / 2;
+    var cH = (H - gap) / 2;
+    return [
+      { left: 0,        top: 0,        width: cW, height: cH },
+      { left: cW + gap, top: 0,        width: cW, height: cH },
+      { left: 0,        top: cH + gap, width: cW, height: cH },
+      { left: cW + gap, top: cH + gap, width: cW, height: cH },
     ];
+  }
 
-    var gridWrap = document.getElementById('gpScrollGridWrap');
-    var cells = Array.from(gridWrap.querySelectorAll('.gp-sg-cell'));
-    var imgs  = Array.from(gridWrap.querySelectorAll('.gp-sg-cell img'));
-    var lb = document.getElementById('gpLightbox');
-    var lbImg = document.getElementById('gpLightboxImg');
-    var lbName = document.getElementById('gpLightboxName');
-    var lbLoc = document.getElementById('gpLightboxLoc');
+  function applyRect(card, rect) {
+    card.style.left   = rect.left   + 'px';
+    card.style.top    = rect.top    + 'px';
+    card.style.width  = rect.width  + 'px';
+    card.style.height = rect.height + 'px';
+  }
 
-    var currentFilter = 'all';
-    var currentStart  = 0;
-    var isAnimating   = false;
-    var busyTimer     = null;
+  function catLabel(cat) {
+    return { completed: 'Completed', ongoing: 'Ongoing', renovation: 'Renovation' }[cat] || cat;
+  }
 
-    function filteredProjects(){
-      if(currentFilter==='all')return projects;
-      return projects.filter(function(p){return p.cat===currentFilter;});
+  function fillCard(card, project) {
+    card.querySelector('.gp-card-img img').src        = project.img;
+    card.querySelector('.gp-card-img img').alt        = project.name;
+    card.querySelector('.gp-card-cat').textContent    = catLabel(project.cat);
+    card.querySelector('.gp-card-name').textContent   = project.name;
+    card.querySelector('.gp-card-loc span').textContent = project.loc + ', Kerala';
+    card.setAttribute('aria-label', project.name);
+  }
+
+  function getFiltered() {
+    if (currentFilter === 'all') return projects;
+    return projects.filter(function (p) { return p.cat === currentFilter; });
+  }
+
+  function updateCounter() {
+    var fp  = getFiltered();
+    var len = fp.length;
+    var a   = (currentStart % len) + 1;
+    var b   = Math.min(a + 3, len);
+    cntCurrent.textContent = a + '\u2013' + b;
+    cntTotal.textContent   = len;
+  }
+
+  function positionPill(btn) {
+    var bar     = document.querySelector('.gp-filter-bar');
+    var barRect = bar.getBoundingClientRect();
+    var bRect   = btn.getBoundingClientRect();
+    filterPill.style.left  = (bRect.left - barRect.left - 5) + 'px';
+    filterPill.style.width = bRect.width + 'px';
+  }
+
+  function renderInstant() {
+    var fp    = getFiltered();
+    var rects = getSlotRects();
+    for (var i = 0; i < 4; i++) {
+      var p = fp[(currentStart + i) % fp.length];
+      fillCard(cards[i], p);
+      applyRect(cards[i], rects[i]);
+      cards[i].style.opacity = '1';
+      if (typeof gsap !== 'undefined') { gsap.set(cards[i], { clearProps: 'transform' }); }
     }
+    var ghost = cards[4];
+    ghost.style.opacity = '0';
+    updateCounter();
+  }
 
-    function loadGrid(animate){
-      var fp = filteredProjects();
-      var start = currentStart % fp.length || 0;
-      if(animate && typeof gsap!=='undefined'){
-        gsap.to(imgs,{scale:.85,duration:.22,ease:'power2.in',onComplete:function(){
-          for(var i=0;i<4;i++){var p=fp[(start+i)%fp.length];imgs[i].src=p.img;imgs[i].alt=p.name;p.name;}
-          gsap.to(imgs,{scale:1,duration:.28,ease:'power2.out'});
-        }});
-      }else{
-        for(var i=0;i<4;i++){var p=fp[(start+i)%fp.length];imgs[i].src=p.img;imgs[i].alt=p.name;p.name;}
-      }
+  function animateCycle(dir) {
+    if (isAnimating) return;
+    var fp = getFiltered();
+    if (fp.length < 4) return;
+    isAnimating = true;
+    currentStart = ((currentStart + dir) % fp.length + fp.length) % fp.length;
+    if (prefersReduced || typeof gsap === 'undefined') { renderInstant(); isAnimating = false; updateCounter(); return; }
+    var rects = getSlotRects();
+    var W     = stage.offsetWidth;
+    var DUR  = 0.72;
+    var EASE = 'power3.inOut';
+    var ghost    = cards[4];
+    var incomingIdx;
+    if (dir > 0) { incomingIdx = (currentStart + 3) % fp.length; }
+    else { incomingIdx = currentStart % fp.length; }
+    fillCard(ghost, fp[incomingIdx]);
+    ghost.style.opacity = '1';
+    ghost.removeAttribute('aria-hidden');
+    if (dir > 0) {
+      applyRect(ghost, { left: W + rects[3].left, top: rects[3].top, width: rects[3].width, height: rects[3].height });
+    } else {
+      applyRect(ghost, { left: -(rects[0].width + rects[0].left + 20), top: rects[0].top, width: rects[0].width, height: rects[0].height });
     }
-
-    function cycle(dir){
-      if(isAnimating)return;
-      var fp=filteredProjects();
-      if(fp.length<4)return;
-      isAnimating=true;
-      clearTimeout(busyTimer);
-      busyTimer=setTimeout(function(){isAnimating=false;},900);
-
-      currentStart=(currentStart+dir+fp.length)%fp.length;
-      var newStart=currentStart;
-
-      if(typeof gsap!=='undefined'){
-        var r=cells.map(function(c){return c.getBoundingClientRect();});
-        var tl=gsap.timeline({onComplete:function(){isAnimating=false;}});
-        /* Step 1: shrink */
-        tl.to(imgs,{scale:.85,duration:.22,ease:'power2.in'});
-        /* Step 2: slide images along Z-path */
-        tl.to(imgs[0],{x:'-120%',duration:.35,ease:'power2.in'},'-=0.02');
-        tl.to(imgs[1],{x:(r[0].left-r[1].left)+'px',y:(r[0].top-r[1].top)+'px',duration:.35,ease:'power2.inOut'},'-=0.35');
-        tl.to(imgs[2],{x:(r[1].left-r[2].left)+'px',y:(r[1].top-r[2].top)+'px',duration:.35,ease:'power2.inOut'},'-=0.35');
-        tl.to(imgs[3],{x:(r[2].left-r[3].left)+'px',y:(r[2].top-r[3].top)+'px',duration:.35,ease:'power2.inOut'},'-=0.35');
-        /* Step 3: swap srcs, imgs[3] enters from right */
-        tl.call(function(){
-          for(var i=0;i<4;i++){var p=fp[(newStart+i)%fp.length];imgs[i].src=p.img;imgs[i].alt=p.name;}
-          gsap.set(imgs[0],{x:0,y:0});
-          gsap.set(imgs[1],{x:0,y:0});
-          gsap.set(imgs[2],{x:0,y:0});
-          gsap.set(imgs[3],{x:'120%',y:0});
-        });
-        /* Step 4: slide imgs[3] in + enlarge all */
-        tl.to(imgs[3],{x:'0%',duration:.35,ease:'power2.out'});
-        tl.to(imgs,{scale:1,duration:.28,ease:'power2.out'},'-=0.1');
-      }else{
-        for(var i=0;i<4;i++){var p=fp[(newStart+i)%fp.length];imgs[i].src=p.img;imgs[i].alt=p.name;p.name;}
-      }
+    gsap.set(ghost, { clearProps: 'transform' });
+    var tl = gsap.timeline({ onComplete: function () {
+      if (dir > 0) { var dead = cards.shift(); dead.classList.add('gp-card--ghost'); dead.setAttribute('aria-hidden','true'); cards.push(dead); }
+      else { var dead = cards.pop(); dead.classList.add('gp-card--ghost'); dead.setAttribute('aria-hidden','true'); cards.unshift(dead); }
+      cards[dir>0?3:0].classList.remove('gp-card--ghost');
+      cards[dir>0?3:0].removeAttribute('aria-hidden');
+      for (var i = 0; i < 4; i++) { applyRect(cards[i], rects[i]); gsap.set(cards[i], { clearProps: 'transform,opacity' }); cards[i].style.opacity = '1'; }
+      cards[4].style.opacity = '0';
+      rebindClickHandlers(); isAnimating = false;
+    }});
+    if (dir > 0) {
+      tl.to(cards[0], { left: -(rects[0].width + 20), top: rects[0].top, opacity: 0.4, duration: DUR, ease: EASE }, 0);
+      tl.to(cards[1], { left: rects[0].left, top: rects[0].top, duration: DUR, ease: EASE }, 0);
+      tl.to(cards[2], { left: rects[1].left, top: rects[1].top, duration: DUR, ease: EASE }, 0);
+      tl.to(cards[3], { left: rects[2].left, top: rects[2].top, duration: DUR, ease: EASE }, 0);
+      tl.to(ghost,    { left: rects[3].left, top: rects[3].top, duration: DUR, ease: EASE }, 0);
+    } else {
+      tl.to(cards[3], { left: W + 20, top: rects[3].top, opacity: 0.4, duration: DUR, ease: EASE }, 0);
+      tl.to(cards[2], { left: rects[3].left, top: rects[3].top, duration: DUR, ease: EASE }, 0);
+      tl.to(cards[1], { left: rects[2].left, top: rects[2].top, duration: DUR, ease: EASE }, 0);
+      tl.to(cards[0], { left: rects[1].left, top: rects[1].top, duration: DUR, ease: EASE }, 0);
+      tl.to(ghost,    { left: rects[0].left, top: rects[0].top, duration: DUR, ease: EASE }, 0);
     }
+  }
 
-    /* Wheel scroll on grid */
-    gridWrap.addEventListener('wheel',function(e){
-      e.preventDefault();
-      cycle(e.deltaY>0?1:-1);
-    },{passive:false});
+  function animateFilterChange() {
+    if (prefersReduced || typeof gsap === 'undefined') { cards.sort(function (a, b) { return parseInt(a.dataset.slot) - parseInt(b.dataset.slot); }); renderInstant(); return; }
+    if (isAnimating) { gsap.killTweensOf(cards); isAnimating = false; }
+    isAnimating = true;
+    var rects = getSlotRects();
+    var exitVecs = [{ x: -50, y: -40 }, { x: 50, y: -40 }, { x: -50, y: 40 }, { x: 50, y: 40 }];
+    var tl = gsap.timeline({ onComplete: function () { var active = cards.slice(0, 4); var fp = getFiltered(); for (var i = 0; i < 4; i++) { fillCard(active[i], fp[(currentStart + i) % fp.length]); applyRect(active[i], rects[i]); } updateCounter(); isAnimating = false; }});
+    cards.slice(0, 4).forEach(function (card, i) { tl.to(card, { x: exitVecs[i].x, y: exitVecs[i].y, scale: 0.84, opacity: 0, duration: 0.3, ease: 'power2.in' }, i * 0.04); });
+    tl.call(function () { var fp = getFiltered(); cards.slice(0, 4).forEach(function (card, i) { fillCard(card, fp[(currentStart + i) % fp.length]); applyRect(card, rects[i]); gsap.set(card, { x: exitVecs[i].x * 0.8, y: exitVecs[i].y * 0.8, scale: 0.88, opacity: 0 }); }); cards[4].style.opacity = '0'; });
+    cards.slice(0, 4).forEach(function (card, i) { tl.to(card, { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.58, ease: 'power3.out' }, '+=' + (i * 0.05)); });
+  }
 
-    /* Touch swipe on grid */
-    var touchY=0;
-    gridWrap.addEventListener('touchstart',function(e){touchY=e.touches[0].clientY;},{passive:true});
-    gridWrap.addEventListener('touchend',function(e){
-      var d=touchY-e.changedTouches[0].clientY;
-      if(Math.abs(d)>40)cycle(d>0?1:-1);
-    },{passive:true});
+  function openLightbox(slotIndex) { var fp = getFiltered(); var p = fp[(currentStart + slotIndex) % fp.length]; featProject = p; document.getElementById('gpFeatImg').src = p.img; document.getElementById('gpFeatImg').alt = p.name; document.getElementById('gpFeatTitle').textContent = p.name; document.getElementById('gpFeatLoc').textContent = p.loc + ', Kerala'; document.getElementById('gpFeatDesc').textContent = 'A stunning ' + p.cat + ' project crafted with precision and quality in ' + p.loc + '.'; document.getElementById('gpFeatSqft').textContent = p.sqft; document.getElementById('gpFeatYear').textContent = p.year; document.getElementById('gpFeatCat').textContent = catLabel(p.cat); document.getElementById('gpFeatBadge').textContent = 'HIGHLIGHTS'; document.querySelector('.gp-featured').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  function closeLb() { lb.classList.remove('active'); document.body.style.overflow = ''; }
+  var clickHandlers = [null, null, null, null];
+  function rebindClickHandlers() { for (var i = 0; i < 4; i++) { (function (slotIdx, card) { if (clickHandlers[slotIdx]) { card.removeEventListener('click', clickHandlers[slotIdx]); card.removeEventListener('keydown', clickHandlers[slotIdx + '_key']); } var handler = (function (idx) { return function () { openLightbox(idx); }; })(slotIdx); var keyHandler = (function (h) { return function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); h(); } }; })(handler); card.addEventListener('click', handler); card.addEventListener('keydown', keyHandler); clickHandlers[slotIdx] = handler; clickHandlers[slotIdx + '_key'] = keyHandler; })(i, cards[i]); } }
+  var resizeTimer;
+  window.addEventListener('resize', function () { clearTimeout(resizeTimer); resizeTimer = setTimeout(function () { if (!isAnimating) renderInstant(); var activeBtn = document.querySelector('.gp-filter-btn.active'); if (activeBtn) positionPill(activeBtn); }, 120); }, { passive: true });
+  stage.addEventListener('wheel', function (e) { e.preventDefault(); animateCycle(e.deltaY > 0 ? 1 : -1); }, { passive: false });
+  var touchStartX = 0, touchStartY = 0;
+  stage.addEventListener('touchstart', function (e) { touchStartX = e.touches[0].clientX; touchStartY = e.touches[0].clientY; }, { passive: true });
+  stage.addEventListener('touchend', function (e) { var dx = touchStartX - e.changedTouches[0].clientX; var dy = touchStartY - e.changedTouches[0].clientY; if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) animateCycle(dx > 0 ? 1 : -1); else if (Math.abs(dy) > 40) animateCycle(dy > 0 ? 1 : -1); }, { passive: true });
+  btnNext.addEventListener('click', function () { animateCycle(1); });
+  btnPrev.addEventListener('click', function () { animateCycle(-1); });
+  document.addEventListener('keydown', function (e) { var tag = document.activeElement && document.activeElement.tagName; if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return; if (e.key === 'ArrowRight') animateCycle(1); if (e.key === 'ArrowLeft')  animateCycle(-1); });
+  filterBtns.forEach(function (btn) { btn.addEventListener('click', function () { filterBtns.forEach(function (b) { b.classList.remove('active'); }); btn.classList.add('active'); currentFilter = btn.dataset.filter; currentStart = 0; positionPill(btn); animateFilterChange(); if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh(); }); });
+  document.getElementById('gpLightboxClose').addEventListener('click', closeLb);
+  lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
+  var featuredTrigger = document.querySelector('.gp-lightbox-trigger');
+  if (featuredTrigger) { featuredTrigger.addEventListener('click', function (e) { e.preventDefault(); if (!featProject) featProject = projects[0]; if (featProject.cat === 'renovation') { lbImg.src = featProject.img; lbImg.alt = featProject.name; lbName.textContent = featProject.name; lbLoc.textContent = featProject.loc + ', Kerala'; lb.classList.add('active'); document.body.style.overflow = 'hidden'; } else { var catProjs = projects.filter(function(pr){return pr.cat===featProject.cat;}); var catIdx = catProjs.findIndex(function(pr){return pr.name===featProject.name;}); window.location.href = 'projects.html?type=' + featProject.cat + '&idx=' + (catIdx>=0?catIdx:0); } }); }
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.fromTo('.gp-header', { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: .8, ease: 'power3.out', scrollTrigger: { trigger: '.gp-header', start: 'top 85%', toggleActions: 'play none none reverse' } });
+    gsap.fromTo('.gp-featured-image', { opacity: 0, x: -36 }, { opacity: 1, x: 0, duration: .85, ease: 'power3.out', scrollTrigger: { trigger: '.gp-featured', start: 'top 78%', toggleActions: 'play none none reverse' } });
+    gsap.fromTo('.gp-featured-info', { opacity: 0, x: 36 }, { opacity: 1, x: 0, duration: .85, ease: 'power3.out', scrollTrigger: { trigger: '.gp-featured', start: 'top 78%', toggleActions: 'play none none reverse' } });
+    gsap.fromTo('.gp-filter-bar', { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: .6, ease: 'power2.out', scrollTrigger: { trigger: '.gp-filter-bar', start: 'top 90%', toggleActions: 'play none none reverse' } });
+    gsap.fromTo('.gp-stage', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .9, ease: 'power3.out', scrollTrigger: { trigger: '.gp-stage', start: 'top 85%', toggleActions: 'play none none reverse' } });
+    ScrollTrigger.refresh();
+  }
+  requestAnimationFrame(function () {
+    renderInstant();
+    rebindClickHandlers();
+    var activeBtn = document.querySelector('.gp-filter-btn.active');
+    if (activeBtn) positionPill(activeBtn);
+  });
+})();
+</script>
 
-    /* Click → lightbox */
-    cells.forEach(function(cell,i){
-      cell.addEventListener('click',function(){
-        var fp=filteredProjects();
-        var idx=(currentStart+i)%fp.length;
-        var p=fp[idx];
-        lbImg.src=p.img;lbImg.alt=p.name;
-        lbName.textContent=p.name;
-        lbLoc.textContent=p.loc+'  \u2022  '+p.sqft+' sq.ft  \u2022  '+p.cat;
-        lb.classList.add('active');
-        document.body.style.overflow='hidden';
-      });
-    });
 
-    /* Filters */
-    document.querySelectorAll('.gp-filter-btn').forEach(function(btn){
-      btn.addEventListener('click',function(){
-        document.querySelectorAll('.gp-filter-btn').forEach(function(b){b.classList.remove('active');});
-        btn.classList.add('active');
-        currentFilter=btn.dataset.filter;
-        currentStart=0;
-        loadGrid(true);
-        if(typeof ScrollTrigger!=='undefined')ScrollTrigger.refresh();
-      });
-    });
-
-    /* Lightbox */
-    document.getElementById('gpLightboxClose').addEventListener('click',closeLb);
-    document.getElementById('gpLightbox').addEventListener('click',function(e){if(e.target===lb)closeLb();});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
-    function closeLb(){lb.classList.remove('active');document.body.style.overflow='';}
-
-    /* Featured lightbox trigger */
-    document.querySelector('.gp-lightbox-trigger').addEventListener('click',function(e){
-      e.preventDefault();
-      var t=e.currentTarget;
-      lbImg.src=t.dataset.img;lbName.textContent=t.dataset.name;lbLoc.textContent=t.dataset.loc;
-      lb.classList.add('active');document.body.style.overflow='hidden';
-    });
-
-    /* GSAP ScrollTrigger animations for featured section */
-    if(typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined'){
-      gsap.fromTo('.gp-header',{opacity:0,y:30},{opacity:1,y:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:'.gp-header',start:'top 85%',toggleActions:'play none none reverse'}});
-      gsap.fromTo('.gp-featured-image',{opacity:0,x:-40},{opacity:1,x:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:'.gp-featured',start:'top 78%',toggleActions:'play none none reverse'}});
-      gsap.fromTo('.gp-featured-info',{opacity:0,x:40},{opacity:1,x:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:'.gp-featured',start:'top 78%',toggleActions:'play none none reverse'}});
-      gsap.fromTo('.gp-filter-bar',{opacity:0,y:20},{opacity:1,y:0,duration:.6,ease:'power2.out',scrollTrigger:{trigger:'.gp-filter-bar',start:'top 90%',toggleActions:'play none none reverse'}});
-      ScrollTrigger.refresh();
-    }
-
-    /* Initial */
-    loadGrid(false);
-  })();
-  </script>
   <script src="assets/js/components.js"></script>
+
 <!-- Floating Contact Button -->
 <div class="fab-wrap" id="fabWrap">
   <!-- Sub buttons (appear above on click) -->
@@ -1282,7 +1592,7 @@
 
     <!-- LEFT: Form panel -->
     <div class="fab-form-left">
-      <p class="fab-form-eyebrow"><span>âœ¦</span> QUICK MESSAGE</p>
+      <p class="fab-form-eyebrow"><span>✦</span> QUICK MESSAGE</p>
       <h3 class="fab-form-title">Send Us a <span class="fab-title-red">Message</span></h3>
       <p class="fab-form-subtitle">We'd love to hear from you. Share your details and our team will get back to you shortly.</p>
 
@@ -1334,12 +1644,12 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
               <select id="ffBudget">
                 <option value="" disabled selected>Select range</option>
-                <option value="Below â‚¹26 Lakhs">Below â‚¹26 Lakhs</option>
-                <option value="â‚¹26 Lakhs â€“ â‚¹40 Lakhs">â‚¹26 â€“ â‚¹40 Lakhs</option>
-                <option value="â‚¹40 Lakhs â€“ â‚¹60 Lakhs">â‚¹40 â€“ â‚¹60 Lakhs</option>
-                <option value="â‚¹60 Lakhs â€“ â‚¹80 Lakhs">â‚¹60 â€“ â‚¹80 Lakhs</option>
-                <option value="â‚¹80 Lakhs â€“ â‚¹1 Crore">â‚¹80 Lakhs â€“ â‚¹1 Cr</option>
-                <option value="Above â‚¹1 Crore">Above â‚¹1 Crore</option>
+                <option value="Below ₹26 Lakhs">Below ₹26 Lakhs</option>
+                <option value="₹26 Lakhs – ₹40 Lakhs">₹26 – ₹40 Lakhs</option>
+                <option value="₹40 Lakhs – ₹60 Lakhs">₹40 – ₹60 Lakhs</option>
+                <option value="₹60 Lakhs – ₹80 Lakhs">₹60 – ₹80 Lakhs</option>
+                <option value="₹80 Lakhs – ₹1 Crore">₹80 Lakhs – ₹1 Cr</option>
+                <option value="Above ₹1 Crore">Above ₹1 Crore</option>
               </select>
               <svg class="fab-select-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5E7C6A" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
@@ -1443,7 +1753,7 @@
 
   const WA_NUMBER = '918281611381'; // 91 = India country code
 
-  /* â”€â”€ Toggle FAB â”€â”€ */
+  /* ── Toggle FAB ── */
   main.addEventListener('click', e => {
     e.stopPropagation();
     wrap.classList.toggle('open');
@@ -1453,20 +1763,20 @@
     if (!wrap.contains(e.target)) wrap.classList.remove('open');
   });
 
-  /* â”€â”€ WhatsApp direct redirect â”€â”€ */
+  /* ── WhatsApp direct redirect ── */
   wa.addEventListener('click', () => {
     window.open(`https://wa.me/${WA_NUMBER}`, '_blank');
     wrap.classList.remove('open');
   });
 
-  /* â”€â”€ Call direct redirect â”€â”€ */
+  /* ── Call direct redirect ── */
   const call = document.getElementById('fabCall');
   call.addEventListener('click', () => {
     window.location.href = 'tel:+918281611381';
     wrap.classList.remove('open');
   });
 
-  /* â”€â”€ Scroll lock helper (pins body so the page does not jump) â”€â”€ */
+  /* ── Scroll lock helper (pins body so the page does not jump) ── */
   function setScrollLock(on) {
     const html = document.documentElement;
     const body = document.body;
@@ -1494,14 +1804,25 @@
     }
   }
 
-  /* â”€â”€ Open message form â”€â”€ */
+  /* ── Open message form ── */
   msg.addEventListener('click', () => {
     overlay.classList.add('active');
     setScrollLock(true);
     wrap.classList.remove('open');
   });
 
-  /* â”€â”€ Close modal â”€â”€ */
+  /* ── Hero badge opens message form ── */
+const heroBadge = document.getElementById('heroBadge');
+if (heroBadge) {
+  heroBadge.style.cursor = 'pointer';
+  heroBadge.addEventListener('click', () => {
+    overlay.classList.add('active');
+    setScrollLock(true);
+    wrap.classList.remove('open');
+  });
+}
+
+  /* ── Close modal ── */
   closeBtn.addEventListener('click', () => {
     overlay.classList.remove('active');
     setScrollLock(false);
@@ -1514,7 +1835,7 @@
     }
   });
 
-  /* â”€â”€ Validation helpers â”€â”€ */
+  /* ── Validation helpers ── */
   function setInvalid(fieldId, errId) {
     document.getElementById(fieldId).classList.add('invalid');
     document.getElementById(errId).classList.add('visible');
@@ -1530,7 +1851,7 @@
   document.getElementById('ffPhone').addEventListener('input', () =>
     clearInvalid('ffPhoneWrap', 'ffPhoneErr'));
 
-  /* â”€â”€ Form submit â†’ WhatsApp message â”€â”€ */
+  /* ── Form submit → WhatsApp message ── */
   form.addEventListener('submit', e => {
     e.preventDefault();
 
@@ -1581,10 +1902,10 @@
 
 <script>
 window.addEventListener('load', () => {
-  /* â•â•â• SCROLL REVEAL â€” ported from sampleanimation/techno (GSAP + ScrollTrigger) â•â•â• */
+  /* ═══ SCROLL REVEAL — ported from sampleanimation/techno (GSAP + ScrollTrigger) ═══ */
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
-  /* Eyebrow / label â€” drops in from y:-20 (matches .ts-badge) */
+  /* Eyebrow / label — drops in from y:-20 (matches .ts-badge) */
   function labelReveal(sel, start) {
     document.querySelectorAll(sel).forEach(el => {
       gsap.fromTo(el,
@@ -1595,7 +1916,7 @@ window.addEventListener('load', () => {
     });
   }
 
-  /* Text / paragraph â€” slides up from y:30 (matches .ts-desc / .ts-quote) */
+  /* Text / paragraph — slides up from y:30 (matches .ts-desc / .ts-quote) */
   function textReveal(sel, start, dur) {
     document.querySelectorAll(sel).forEach(el => {
       gsap.fromTo(el,
@@ -1606,7 +1927,7 @@ window.addEventListener('load', () => {
     });
   }
 
-  /* Divider / underline / dots â€” plain fade */
+  /* Divider / underline / dots — plain fade */
   function fadeReveal(sel, start) {
     document.querySelectorAll(sel).forEach(el => {
       gsap.fromTo(el,
@@ -1617,36 +1938,153 @@ window.addEventListener('load', () => {
     });
   }
 
-  /* Images â€” slide in horizontally */
-  function slideReveal(sel, fromX, start) {
+  /* Images — slide in horizontally */
+  function slideReveal(sel, fromX, start, fromY) {
     document.querySelectorAll(sel).forEach(el => {
       gsap.fromTo(el,
-        { opacity: 0, x: fromX },
-        { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out',
+        { opacity: 0, x: fromX, y: fromY || 0 },
+        { opacity: 1, x: 0, y: 0, duration: 0.9, ease: 'power3.out',
           scrollTrigger: { trigger: el, start: start || 'top 85%', toggleActions: 'play none none reverse' } }
       );
     });
   }
 
-  /* â”€â”€ GALLERY SHOWCASE â”€â”€ */
-  labelReveal('.gal-eyebrow');
-  textReveal('.gal-headline');
-  textReveal('.gal-desc');
+  /* ── RBE SECTION ── */
+  labelReveal('.rbe-section .rbe-eyebrow');
+  textReveal('.rbe-section .rbe-headline');
+  fadeReveal('.rbe-section .rbe-rule');
+  textReveal('.rbe-section .rbe-desc', 'top 82%');
+  textReveal('.rbe-section .rbe-tagline', 'top 85%');
 
-  /* â”€â”€ GALLERY GRID â”€â”€ */
-  const galCards = document.querySelectorAll('.gal-grid .gal-card');
-  if (galCards.length) {
+  /* Blades staggered slide-in from right */
+  const blades = document.querySelectorAll('.rbe-blade');
+  if (blades.length) {
     gsap.timeline({
-      scrollTrigger: { trigger: '.gal-grid', start: 'top 85%', toggleActions: 'play none none reverse' }
-    }).fromTo(galCards,
-      { opacity: 0, y: 40 },
-      { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out', stagger: 0.12 });
+      scrollTrigger: { trigger: '.rbe-blades', start: 'top 80%', toggleActions: 'play none none reverse' }
+    }).fromTo(blades,
+      { opacity: 0, x: 60 },
+      { opacity: 1, x: 0, duration: 0.65, ease: 'power3.out', stagger: 0.15, delay: 0.5 });
   }
+
+  /* ── EVERY DREAM HOME ── */
+  labelReveal('.edh-section .services-eyebrow');
+  fadeReveal('.edh-section .edh-icon-row');
+  textReveal('.edh-section .edh-headline');
+  const edhBodyPs = document.querySelectorAll('.edh-section .edh-body p');
+  if (edhBodyPs.length) {
+    gsap.timeline({
+      scrollTrigger: { trigger: '.edh-body', start: 'top 82%', toggleActions: 'play none none reverse' }
+    }).fromTo(edhBodyPs,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.15 });
+  }
+  textReveal('.edh-section .edh-quote');
+  fadeReveal('.edh-section .edh-divider--bottom');
+  const edhImg = document.querySelector('.edh-section .edh-right');
+  if (edhImg) {
+    gsap.fromTo(edhImg,
+      { opacity: 0, scale: 1.12 },
+      { opacity: 1, scale: 1, duration: 1, ease: 'power2.out',
+        scrollTrigger: { trigger: window.innerWidth <= 768
+            ? '.edh-section .edh-quote-text'
+            : '.edh-section .edh-body p:last-child', start: 'top 80%', toggleActions: 'play none none reverse' } });
+  }
+
+  /* ── CORE VALUES ── */
+  labelReveal('.cv-section .cv-eyebrow');
+  textReveal('.cv-section .cv-headline');
+  fadeReveal('.cv-section .cv-rule');
+  textReveal('.cv-section .cv-desc');
+
+  const cvItems = document.querySelectorAll('.cv-item');
+  if (cvItems.length) {
+    gsap.timeline({
+      scrollTrigger: { trigger: '.cv-timeline', start: 'top 80%', toggleActions: 'play none none reverse' }
+    }).fromTo(cvItems,
+      { opacity: 0, x: 60 },
+      { opacity: 1, x: 0, duration: 0.6, ease: 'power3.out', stagger: 0.18 });
+  }
+
+  /* ── GALLERY ── */
+  labelReveal('.gallery .gallery-eyebrow');
+  textReveal('.gallery .gallery-headline');
+  fadeReveal('.gallery .gallery-divider');
+  textReveal('.gallery .gallery-sub');
+  textReveal('.gallery .gallery-stats', 'top 85%');
+
+  /* ── SHOWCASE ── */
+  labelReveal('.showcase .showcase-eyebrow');
+  textReveal('.showcase .showcase-headline');
+  fadeReveal('.showcase .showcase-underline');
+  textReveal('.showcase .showcase-desc');
+  textReveal('.showcase .btn-showcase', 'top 88%');
+  fadeReveal('.showcase .showcase-dots', 'top 90%');
+
+  /* ── ABOUT ── */
+  slideReveal('.about .about-images', 0, 'top 85%', 60);
+  labelReveal('.about .services-eyebrow');
+  textReveal('.about .about-headline');
+  fadeReveal('.about .about-headline-underline');
+
+  const aboutDescs = document.querySelectorAll('.about .about-desc');
+  if (aboutDescs.length) {
+    gsap.timeline({
+      scrollTrigger: { trigger: '.about .about-content', start: 'top 75%', toggleActions: 'play none none reverse' }
+    }).fromTo(aboutDescs,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.65, ease: 'power3.out', stagger: 0.15 });
+  }
+
+  /* ── ABOUT BOTTOM BAR (stats inside clip-path) ── */
+  const aboutStats = document.querySelectorAll('.about .about-bottom-stat');
+  if (aboutStats.length) {
+    gsap.timeline({
+      scrollTrigger: { trigger: '.about .about-bottom-bar', start: 'top 80%', toggleActions: 'play none none reverse' }
+    }).fromTo(aboutStats,
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', stagger: 0.2 });
+  }
+  const aboutIcons = document.querySelectorAll('.about .about-bottom-arch-icon');
+  if (aboutIcons.length) {
+    gsap.fromTo(aboutIcons,
+      { opacity: 0, scale: 0.6 },
+      { opacity: 1, scale: 1, duration: 0.7, ease: 'back.out(1.5)',
+        scrollTrigger: { trigger: '.about .about-bottom-bar', start: 'top 80%', toggleActions: 'play none none reverse' } });
+  }
+
+  textReveal('.about .about-stat-single', 'top 85%');
+  textReveal('.about .btn-about', 'top 88%');
+
+  /* ── SERVICES ── */
+  labelReveal('.services .services-eyebrow');
+  textReveal('.services .services-headline');
+  fadeReveal('.services .services-divider');
+
+  const serviceCards = document.querySelectorAll('.services .service-card');
+  if (serviceCards.length) {
+    gsap.timeline({
+      scrollTrigger: { trigger: '.services .services-grid', start: 'top 85%', toggleActions: 'play none none reverse' }
+    }).fromTo(serviceCards,
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out', stagger: 0.25,
+        clearProps: 'transform',
+        onStart: () => serviceCards.forEach(el => el.classList.add('gsap-animating')),
+        onComplete: () => serviceCards.forEach(el => el.classList.remove('gsap-animating')) });
+  }
+
+  /* ── CHOOSE ── */
+  slideReveal('.choose .choose-images', -60);
+  labelReveal('.choose .choose-eyebrow');
+  textReveal('.choose .choose-headline');
+  textReveal('.choose .choose-desc');
+  textReveal('.choose .choose-features', 'top 85%');
+  textReveal('.choose .btn-choose', 'top 88%');
 
   ScrollTrigger.refresh();
 });
 </script>
-<!-- â”€â”€ SCROLL TO TOP BUTTON â”€â”€ -->
+
+<!-- ── SCROLL TO TOP BUTTON ── -->
 <div class="stt-wrap" id="sttWrap">
   <svg class="stt-ring" viewBox="0 0 60 60" width="60" height="60">
     <circle class="stt-ring-track" cx="30" cy="30" r="26" />
@@ -1660,7 +2098,7 @@ window.addEventListener('load', () => {
 </div>
 
 <style>
-/* â”€â”€ SCROLL TO TOP â€” premium white button â”€â”€ */
+/* ── SCROLL TO TOP — premium white button ── */
 .stt-wrap {
   position: fixed;
   bottom: 7rem;
@@ -1683,12 +2121,12 @@ window.addEventListener('load', () => {
   pointer-events: all;
 }
 
-/* Legacy SVG ring is no longer used â€” hidden */
+/* Legacy SVG ring is no longer used — hidden */
 .stt-ring {
   display: none;
 }
 
-/* Center button â€” solid white 44px circle */
+/* Center button — solid white 44px circle */
 .stt-btn {
   position: absolute;
   inset: 1px;
@@ -1706,7 +2144,7 @@ window.addEventListener('load', () => {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-/* Progress ring â€” thin red arc via conic-gradient, driven by --progress */
+/* Progress ring — thin red arc via conic-gradient, driven by --progress */
 .stt-btn::before {
   content: '';
   position: absolute;
@@ -1718,7 +2156,7 @@ window.addEventListener('load', () => {
   z-index: -1;
 }
 
-/* Arrow icon â€” dark, centered, 18px */
+/* Arrow icon — dark, centered, 18px */
 .stt-btn svg {
   width: 18px;
   height: 18px;
@@ -1740,11 +2178,10 @@ window.addEventListener('load', () => {
   transform: scale(0.96);
 }
 
-/* Keep the Scroll-to-Top button where it is â€” move the Message FAB above it */
+/* Keep the Scroll-to-Top button where it is — move the Message FAB above it */
 #fabWrap {
   bottom: 11rem;
 }
-
 </style>
 
 <script>
@@ -1752,10 +2189,10 @@ window.addEventListener('load', () => {
   const wrap     = document.getElementById('sttWrap');
   const btn      = document.getElementById('sttBtn');
 
-  /* â”€â”€ Show/hide + progress ring â”€â”€ */
+  /* ── Show/hide + progress ring ── */
   function onScroll() {
     const scrollY   = window.scrollY;
-    const heroEl    = document.querySelector('.about-hero');
+    const heroEl    = document.querySelector('.hero');
     const heroH     = heroEl ? heroEl.offsetHeight : window.innerHeight;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
 
@@ -1766,7 +2203,7 @@ window.addEventListener('load', () => {
       wrap.classList.add('stt-visible');
     }
 
-    /* Progress arc: 0 at hero bottom, full at page bottom (0Â° â†’ 360Â°) */
+    /* Progress arc: 0 at hero bottom, full at page bottom (0° → 360°) */
     const scrollable  = maxScroll - heroH;
     const scrolled    = Math.max(0, scrollY - heroH);
     const pct         = scrollable > 0 ? Math.min(scrolled / scrollable, 1) : 0;
@@ -1777,7 +2214,7 @@ window.addEventListener('load', () => {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll(); /* run once on load */
 
-  /* â”€â”€ Fast scroll to top (no easing, ~300ms) â”€â”€ */
+  /* ── Fast scroll to top (no easing, ~300ms) ── */
   btn.addEventListener('click', () => {
     const start     = window.scrollY;
     const startTime = performance.now();
@@ -1795,7 +2232,389 @@ window.addEventListener('load', () => {
 })();
 </script>
 
-<script type="module" src="assets/js/gallery-hero-depth.js"></script>
+<style>
+/* ── HERO SLIDER ── */
+.hero-slider{position:relative;width:100%;height:100vh;overflow:hidden;}
+.hero-slider-layer{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed;}
+.hero-slider-layer--top{opacity:0;transition:opacity 1.2s ease;background-attachment:fixed;}
+.hero-slider-content{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left;padding:0 4vw;}
+.hero-slider-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:1rem;font-weight:600;letter-spacing:.1em;color:#fff;margin-bottom:1rem;text-shadow:0 2px 16px rgba(0,0,0,.65);}
+.hero-slider-star{color:#5E7C6A;font-size:.9rem;}
+.hero-slider-headline{font-family:'Poltawski Nowy',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:800;line-height:1.05;color:#fff;text-shadow:0 2px 28px rgba(0,0,0,.65),0 4px 56px rgba(0,0,0,.4);}
+.hero-slider-dots{position:absolute;bottom:2rem;right:2rem;display:flex;gap:8px;z-index:3;}
+.hero-dot{width:28px;height:4px;border-radius:2px;background:rgba(79,102,86,.4);cursor:pointer;transition:background .3s,width .3s;}
+.hero-dot:hover{background:rgba(79,102,86,.7);}
+.hero-dot.active{background:#4F6656;width:44px;}
+
+/* Transparent navbar in hero slider */
+body.hero-slider-active .navbar{background:transparent;border-bottom-color:transparent;}
+body.hero-slider-active .nav-links a{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.5);}
+body.hero-slider-active .nav-cta{background:#5E7C6A;box-shadow:0 2px 12px rgba(0,0,0,.3);}
+
+/* ── SPLIT FRAME ANIMATION ── */
+.frame-split-section{height:450vh;position:relative;background:#D2CEC8;}
+.frame-split-sticky{position:sticky;top:0;left:0;width:100%;height:100vh;overflow:hidden;background:#D2CEC8;}
+
+.frame-split-left{position:absolute;inset:0 52% 0 0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:0 clamp(1.5rem,5vw,5rem);z-index:1;}
+.frame-hero-content{max-width:520px;}
+.frame-hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:700;letter-spacing:.14em;color:#8FA48D;text-transform:uppercase;margin-bottom:1.2rem;}
+.frame-hero-star{color:#8FA48D;font-size:.85rem;}
+.frame-hero-headline{font-family:'Poltawski Nowy',serif;font-size:clamp(2rem,4vw,3.4rem);font-weight:900;color:#2C2C2C;line-height:1.02;letter-spacing:-.01em;margin-bottom:1.2rem;}
+.frame-hero-headline-green{color:#8FA48D;}
+.frame-hero-desc{font-size:.92rem;color:#6F6F6F;line-height:1.7;margin-bottom:2rem;}
+.frame-hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;}
+.btn-frame-primary{display:inline-flex;align-items:center;padding:.75rem 1.8rem;background:#8FA48D;color:#fff;font-weight:700;font-size:.85rem;letter-spacing:.04em;border-radius:6px;text-decoration:none;transition:background .2s,transform .15s,box-shadow .2s;}
+.btn-frame-primary:hover{background:#7A9278;transform:translateY(-2px);box-shadow:0 8px 24px rgba(143,164,141,.3);}
+.btn-frame-secondary{display:inline-flex;align-items:center;padding:.75rem 1.8rem;background:transparent;color:#2C2C2C;font-weight:600;font-size:.85rem;letter-spacing:.04em;border-radius:6px;text-decoration:none;border:1.5px solid #D8D4CC;transition:border-color .2s,color .2s;}
+.btn-frame-secondary:hover{border-color:#8FA48D;color:#8FA48D;}
+
+/* Scroll indicator */
+.scroll-indicator{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:14px;user-select:none;pointer-events:none;z-index:3;}
+.si-text{display:flex;align-items:baseline;letter-spacing:.18em;text-transform:uppercase;}
+.si-space{width:.45em;display:inline-block;}
+.c{display:inline-block;font-family:'Poltawski Nowy',serif;font-size:18px;font-weight:500;color:#8f8f86;}
+.si-arrows{display:flex;flex-direction:column;align-items:center;gap:2px;}
+.si-arrow{display:block;width:16px;height:16px;border-right:2px solid #8a8a80;border-bottom:2px solid #8a8a80;transform:rotate(45deg);opacity:0;animation:si-cascade 2.4s ease-in-out infinite;}
+.si-arrow--1{animation-delay:0s;}
+.si-arrow--2{animation-delay:.2s;}
+.si-arrow--3{animation-delay:.4s;}
+@keyframes si-cascade{0%{opacity:0;transform:rotate(45deg) translate(-4px,-4px)}40%{opacity:.55;transform:rotate(45deg) translate(0,0)}80%{opacity:0;transform:rotate(45deg) translate(4px,4px)}100%{opacity:0;transform:rotate(45deg) translate(4px,4px)}}
+.hero-scroll-indicator .c{color:rgba(255,255,255,.7);animation:none;text-shadow:0 1px 8px rgba(0,0,0,.5);}
+.hero-scroll-indicator .si-arrow{border-color:rgba(255,255,255,.65);}
+.frame-section-scroll{top:auto;bottom:20px;left:50%;transform:translateX(-50%);z-index:10;}
+
+/* Right: canvas stage */
+.frame-split-right{position:absolute;inset:0 16vw 0 55%;display:flex;align-items:center;justify-content:center;z-index:2;}
+.frame-canvas-stage{position:relative;display:flex;align-items:center;justify-content:center;}
+.frame-canvas-glow{position:absolute;inset:-12%;background:radial-gradient(ellipse at center,rgba(143,164,141,.10) 0%,transparent 70%);pointer-events:none;z-index:0;}
+.frame-split-media{position:relative;width:fit-content;height:fit-content;}
+.frame-split-media::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,#D2CEC8 0%,transparent 16%),linear-gradient(to top,#D2CEC8 0%,transparent 16%),linear-gradient(to right,#D2CEC8 0%,transparent 16%),linear-gradient(to left,#D2CEC8 0%,transparent 16%);pointer-events:none;z-index:3;}
+.frame-split-canvas{width:min(50vw,calc((100vh - 20px)*15/9));aspect-ratio:15/9;height:auto;object-fit:contain;display:block;will-change:transform;clip-path:inset(0 0 4% 0);}
+.frame-canvas-feather{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 52%,#D2CEC8 94%);pointer-events:none;z-index:3;}
+
+ @media(max-width:768px){
+.frame-split-section{height:300vh;}
+.frame-split-sticky{position:absolute;top:0;left:0;width:100%;padding:0;box-sizing:border-box;}
+.frame-split-left{position:absolute;inset:0 0 48% 0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 1.4rem;}
+.frame-hero-content{text-align:center;max-width:100%;}
+.frame-hero-buttons{justify-content:center;}
+.frame-hero-headline{font-size:clamp(1.5rem,7vw,2.2rem);margin-bottom:.8rem;}
+.frame-hero-desc{font-size:.82rem;margin-bottom:1.2rem;max-width:100%;}
+.frame-split-right{position:absolute;inset:52% 0 0 0;z-index:1;display:flex;align-items:center;justify-content:center;}
+.frame-split-media::after{background:linear-gradient(to bottom,#D2CEC8 0%,transparent 10%),linear-gradient(to top,#D2CEC8 0%,transparent 10%),linear-gradient(to right,#D2CEC8 0%,transparent 10%),linear-gradient(to left,#D2CEC8 0%,transparent 10%);}
+.frame-canvas-feather{background:radial-gradient(ellipse at center,transparent 40%,#D2CEC8 88%);}
+.frame-split-canvas{width:min(88vw,calc(45vh*15/9));aspect-ratio:15/9;height:auto;}
+.frame-section-scroll .c{color:#8f8f86;}
+.frame-section-scroll .si-arrow{border-color:#8a8a80;}
+}
+</style>
+
+<script>
+/* ── HERO SLIDER ── */
+(function(){
+  var TOTAL=9, BASE='assets/images/indexhero/hero';
+  var layerA=document.getElementById('heroSliderA'), layerB=document.getElementById('heroSliderB'), dotsWrap=document.getElementById('heroSliderDots');
+  if(!layerA||!layerB)return;
+  var current=1,timer=null;
+  function url(n){return 'url('+BASE+n+'.webp)';}
+  function updDots(){
+    if(!dotsWrap)return;
+    var all=dotsWrap.querySelectorAll('.hero-dot');
+    all.forEach(function(d,i){d.classList.toggle('active',i+1===current);});
+  }
+  function goTo(n){
+    if(n===current)return;
+    layerB.style.backgroundImage=url(n);layerB.style.opacity='1';
+    setTimeout(function(){layerA.style.backgroundImage=layerB.style.backgroundImage;layerB.style.opacity='0';},1200);
+    current=n;updDots();
+  }
+  function nextSlide(){goTo((current%TOTAL)+1);}
+  if(dotsWrap){
+    for(var i=1;i<=TOTAL;i++){
+      var dot=document.createElement('span');dot.className='hero-dot'+(i===1?' active':'');
+      dot.setAttribute('data-index',i);
+      dot.addEventListener('click',(function(idx){return function(){clearInterval(timer);goTo(idx);timer=setInterval(nextSlide,5000);};})(i));
+      dotsWrap.appendChild(dot);
+    }
+  }
+  timer=setInterval(nextSlide,5000);
+  function chkNav(){document.body.classList.toggle('hero-slider-active',window.scrollY<window.innerHeight);}
+  window.addEventListener('scroll',chkNav,{passive:true});chkNav();
+})();
+</script>
+
+<script>
+/* ── FRAME ANIMATION ── */
+(function(){
+  var TOTAL_FRAMES=300;
+  var FRAME_PATH=function(n){var p=String(n).padStart(4,'0');return'assets/images/hero/frames/frame_'+p+'.jpg?v=2';};
+  var canvas=document.getElementById('frameSplitCanvas');
+  var ctx=canvas.getContext('2d',{alpha:false});
+  var section=document.getElementById('frameSplitSection');
+  var BATCH_SIZE=40,images=new Array(TOTAL_FRAMES),loadedSet={},isPaused=false,firstFrameReady=false;
+
+  function resizeCanvas(){
+    var rect=canvas.getBoundingClientRect(),dpr=Math.min(window.devicePixelRatio||1,2);
+    canvas.width=Math.max(1,Math.round(rect.width*dpr));canvas.height=Math.max(1,Math.round(rect.height*dpr));
+  }
+  resizeCanvas();
+  window.addEventListener('resize',function(){resizeCanvas();drawFrame(lastProgress);});
+
+  function loadBatch(from,count){
+    var end=Math.min(from+count,TOTAL_FRAMES);
+    for(var i=from;i<end;i++){if(images[i])continue;
+      var img=new Image();img.src=FRAME_PATH(i+1);
+      img.onload=(function(idx){return function(){loadedSet[idx]=true;if(idx===0&&!firstFrameReady){firstFrameReady=true;drawFrame(0);}};})(i);
+      images[i]=img;loadedSet[i]=false;
+    }
+  }
+
+  function preloadNear(around){
+    var lo=Math.max(0,around-30),hi=Math.min(around+30,TOTAL_FRAMES-1);
+    for(var i=lo;i<=hi;i++){if(!images[i]){var img=new Image();img.src=FRAME_PATH(i+1);img.onload=(function(idx){return function(){loadedSet[idx]=true;};})(i);images[i]=img;loadedSet[i]=false;}}
+  }
+
+  var currentFrame=-1;
+  function drawImage(img){
+    var cw=canvas.width,ch=canvas.height,iw=img.naturalWidth,ih=img.naturalHeight;
+    var scale=Math.max(cw/iw,ch/ih),dw=iw*scale,dh=ih*scale;
+    var dx=(cw-dw)/2,dy=(ch-dh)/2;
+    ctx.drawImage(img,0,0,iw,ih,dx,dy,dw,dh);
+  }
+  function drawFrame(progress){
+    var floatIndex=Math.max(0,Math.min(progress*(TOTAL_FRAMES-1),TOTAL_FRAMES-1));
+    var frameIndex=Math.round(floatIndex);
+    if(frameIndex===currentFrame)return;
+    var img=images[frameIndex];if(!img||!img.complete||!img.naturalWidth)return;
+    ctx.clearRect(0,0,canvas.width,canvas.height);drawImage(img);
+    currentFrame=frameIndex;preloadNear(frameIndex);
+  }
+
+  var lastProgress=0,rafId=null;
+  function onScroll(){
+    if(isPaused||rafId!==null)return;
+    rafId=requestAnimationFrame(function(){
+      rafId=null;
+      var rect=section.getBoundingClientRect(),sectionH=section.offsetHeight;
+      var scrollable=sectionH-window.innerHeight,scrolled=Math.max(0,-rect.top);
+      var progress=scrollable>0?Math.min(scrolled/scrollable,1):0;
+      if(Math.abs(progress-lastProgress)>0.001){lastProgress=progress;drawFrame(progress);}
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(entries){isPaused=!entries[0].isIntersecting;},{threshold:0}).observe(section);
+  }
+
+  loadBatch(0,BATCH_SIZE);
+  onScroll();
+
+  /* ── Mobile: JS-driven sticky (position:sticky is unreliable on mobile) ── */
+  var mqMobile=window.matchMedia('(max-width:768px)');
+  var stickyEl=document.getElementById('frameSplitSticky');
+  function applyMobileSticky(){
+    if(!mqMobile.matches||!stickyEl||!section)return;
+    var rect=section.getBoundingClientRect(), sectionH=section.offsetHeight;
+    var scrollY=window.scrollY, vh=window.innerHeight;
+    var sectionTop=scrollY+rect.top, sectionBottom=sectionTop+sectionH;
+    if(scrollY>=sectionTop&&scrollY<sectionBottom-vh){
+      stickyEl.style.position='fixed';
+      stickyEl.style.top='0';
+      stickyEl.style.left='0';
+      stickyEl.style.width='100%';
+      stickyEl.style.bottom='auto';
+    }else if(scrollY>=sectionBottom-vh){
+      stickyEl.style.position='absolute';
+      stickyEl.style.bottom='0';
+      stickyEl.style.top='auto';
+      stickyEl.style.left='0';
+      stickyEl.style.width='100%';
+    }else{
+      stickyEl.style.position='absolute';
+      stickyEl.style.top='0';
+      stickyEl.style.bottom='auto';
+      stickyEl.style.left='0';
+      stickyEl.style.width='100%';
+    }
+  }
+  mqMobile.addEventListener('change',function(){applyMobileSticky();});
+  if(mqMobile.matches){window.addEventListener('scroll',applyMobileSticky,{passive:true});window.addEventListener('resize',applyMobileSticky);applyMobileSticky();}
+})();
+</script>
+
+<script>history.scrollRestoration='manual';window.scrollTo(0,0);</script>
+
+<!-- ── GALLERY NAVIGATION PATCH ── -->
+<script>
+(function () {
+
+  /* ─────────────────────────────────────────────────────────
+     Helper: parse category + 0-based index from an image src.
+     e.g. "assets/images/gallery/completed/3.webp" → { cat:'completed', idx:2 }
+  ───────────────────────────────────────────────────────── */
+  function parseImg(src) {
+    var m = src.match(/gallery\/(completed|ongoing|renovation)\/(\d+)\.webp/i);
+    if (!m) return null;
+    return { cat: m[1].toLowerCase(), idx: parseInt(m[2], 10) - 1 };
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Fullscreen lightbox for renovation images.
+  ───────────────────────────────────────────────────────── */
+  function openRenovationFullscreen(imgSrc, altText) {
+    var lb    = document.getElementById('gpLightbox');
+    var lbImg = document.getElementById('gpLightboxImg');
+    var lbName = document.getElementById('gpLightboxName');
+    var lbLoc  = document.getElementById('gpLightboxLoc');
+    if (!lb || !lbImg) return;
+    lbImg.src = imgSrc;
+    lbImg.alt = altText || '';
+    if (lbName) lbName.textContent = altText || '';
+    if (lbLoc)  lbLoc.textContent  = '';
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Redirect to projects page (completed / ongoing only).
+  ───────────────────────────────────────────────────────── */
+  function goToProject(cat, idx) {
+    window.location.href = 'projects.html?type=' + cat + '&idx=' + idx;
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     1. TOP SLIDER "View Project" links
+        Clicking the link = redirect (completed/ongoing)
+                           or fullscreen (renovation).
+        Clicking anywhere else on the slide does nothing extra
+        (the original slider JS handles the active slide swap).
+  ───────────────────────────────────────────────────────── */
+  document.querySelectorAll('.gal-slide').forEach(function (slide) {
+    var link = slide.querySelector('.gal-slide-link');
+    var img  = slide.querySelector('img');
+    if (!link || !img) return;
+
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var info = parseImg(img.getAttribute('src') || img.src);
+      if (!info) return;
+      if (info.cat === 'renovation') {
+        openRenovationFullscreen(img.src, img.alt);
+      } else {
+        goToProject(info.cat, info.idx);
+      }
+    });
+  });
+
+  /* ─────────────────────────────────────────────────────────
+     2. BOTTOM GRID CARDS
+        Clicking a card  → update highlights panel + scroll to it.
+        Renovation cards → open fullscreen lightbox instead.
+        (No redirect on card click — that's only via "View Project".)
+
+        We intercept at the conveyor in CAPTURE phase so we run
+        before the original openLightbox handler. For non-renovation
+        we let the original handler run normally (it updates the panel).
+        For renovation we call openRenovationFullscreen after a tick.
+  ───────────────────────────────────────────────────────── */
+  var conveyor = document.getElementById('gpConveyor');
+  if (conveyor) {
+    conveyor.addEventListener('click', function (e) {
+      var card = e.target.closest('.gp-card:not(.gp-card--ghost)');
+      if (!card) return;
+
+      var img = card.querySelector('.gp-card-img img');
+      if (!img) return;
+
+      var info = parseImg(img.getAttribute('src') || img.src);
+      if (!info) return;
+
+      if (info.cat === 'renovation') {
+        /* Prevent the original openLightbox from scrolling to featured panel,
+           then show the image fullscreen instead. */
+        e.stopPropagation();
+        openRenovationFullscreen(img.src, img.alt);
+        return;
+      }
+
+      /* completed / ongoing: let the original handler run (updates highlights).
+         After it scrolls the featured panel into view nothing more is needed. */
+
+    }, true /* capture */);
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     3. FEATURED HIGHLIGHTS "View Project" button
+        (.gp-lightbox-trigger)
+        Reads whichever project is currently shown in the
+        highlights panel and redirects / opens fullscreen.
+  ───────────────────────────────────────────────────────── */
+  /* Track the currently highlighted project via MutationObserver on the featured image */
+  var featImgEl = document.getElementById('gpFeatImg');
+  if (featImgEl && window.MutationObserver) {
+    new MutationObserver(function () {
+      window._galFeatProject = {
+        img: featImgEl.src,
+        alt: featImgEl.alt
+      };
+    }).observe(featImgEl, { attributes: true, attributeFilter: ['src'] });
+  }
+
+  /* Click on the featured image → fullscreen */
+  var featImg = document.getElementById('gpFeatImg');
+  if (featImg) {
+    featImg.style.cursor = 'pointer';
+    featImg.addEventListener('click', function () {
+      var src = featImg.src;
+      var alt = featImg.alt || '';
+      if (!src) return;
+      var lbImg = document.getElementById('gpLightboxImg');
+      var lbName = document.getElementById('gpLightboxName');
+      var lbLoc  = document.getElementById('gpLightboxLoc');
+      var lb     = document.getElementById('gpLightbox');
+      if (lbImg && lb) {
+        lbImg.src = src;
+        lbImg.alt = alt;
+        if (lbName) lbName.textContent = alt;
+        if (lbLoc) lbLoc.textContent = '';
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  }
+
+  var trigger = document.querySelector('.gp-lightbox-trigger');
+  if (trigger) {
+    /* Clone to remove any existing listeners from the original script */
+    var newTrigger = trigger.cloneNode(true);
+    trigger.parentNode.replaceChild(newTrigger, trigger);
+
+    newTrigger.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      /* Get the currently shown image in the highlights panel */
+      var featImg = document.getElementById('gpFeatImg');
+      var src = (window._galFeatProject && window._galFeatProject.img) ||
+                (featImg && featImg.src) || '';
+      var alt = (window._galFeatProject && window._galFeatProject.alt) ||
+                (featImg && featImg.alt) || '';
+
+      var info = parseImg(src);
+      if (!info) return;
+
+      if (info.cat === 'renovation') {
+        openRenovationFullscreen(src, alt);
+      } else {
+        goToProject(info.cat, info.idx);
+      }
+    });
+  }
+
+})();
+</script>
+
 
 </body>
 </html>
